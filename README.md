@@ -1,2 +1,9 @@
 # layout
-嘗試刻板，目前還不會JS、後端
+
+儘管還不會JS、連結資料庫的網頁寫法、還有很多css的語法；
+但還是想說邊做邊學，希望每天都有點進度...
+
+目標網頁如下：https://edm.managertoday.com.tw/future-manager/?utm_source=web_mt&utm_medium=event_banner&utm_campaign=2022FM
+目標是：熟悉如何將元素並排、定位、flexbox，學習如何拆解網頁版型\\
+        有餘力再加上，CSS動畫 (網頁裡好像有)、Grid...
+目前進度：拆解網頁成數個section、nav、footer、從網頁載下圖片...龜速 ...
