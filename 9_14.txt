@@ -21,8 +21,9 @@ Q-6 block內文字如何置中？
 	使用position、改變display...	
 Q-7 文字超出<a>block怎麼辦
 	因為我限制了寬，人家只限制寬= =
-Q-8我怎麼把nav裡面的兩個flex元素 放兩邊排
-Q-9為甚麼把div 做spacebetween 卻溢出 ，如何讓我右邊的div縮小？
+Q-8我怎麼把nab右邊的div填滿nav
+	固定左邊的flex-basis,右邊用flex-grow:1
+Q-9怎麼讓右邊的flexbox，不要超出nav之外?為甚麼nav的padding不起作用？
 	
 
 
