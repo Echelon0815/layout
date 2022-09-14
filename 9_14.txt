@@ -1,3 +1,29 @@
 1.先clone資料到 local dir
 2.看目標網頁畫 nav bar圖
-Q-1為什麼用每個DIV都使用FLEXBOX? -為了在不同寬的裝置上顯示?
+Q-1為什麼用每個DIV都使用FLEXBOX?navbar本身也是flex元素
+	body是巨大的flex容器，用flex把nav,section,footer固定排版
+
+Q-2為什麼logo的<img>要用a標起來?此網頁中把img的大小固定了
+	讓img的作為連接的點取範圍增大？
+
+Q-2-2 img是inline元素怎麼可以指定寬高
+	img元素是獨立於css外的元素(replaced element)，雖然display是inline，
+	但卻像inline-box般，可以指定border、padding、margin,並可以在母元素
+	使用css屬性object-position指定其在母元素中的位置。
+Q-3 nav的高度是怎麼決定的？
+	???
+Q-4如何讓FLEX ITEM不撐開FLEXBOX，橫向排列？
+	下錯DISPLAY ITEM到 LI使得LI變回BLOCK，一排一排
+Q-5為什麼需要用LI表A包起來？
+	為了RWD做下拉式選單?
+Q-6 block內文字如何置中？
+	text-align:center 水平置中,vertical-align是用於行內元素和表格欄，
+	使用position、改變display...	
+Q-7 文字超出<a>block怎麼辦
+	因為我限制了寬，人家只限制寬= =
+Q-8我怎麼把nav裡面的兩個flex元素 放兩邊排
+	
+
+
+發現：body裡面寫了background,background-attchment:fixed，
+	字體行距行高，等基本css
