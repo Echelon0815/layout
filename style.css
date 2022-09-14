@@ -17,9 +17,10 @@ nav {
     background-color: rgba(0, 0, 0, 1);
     display: flex;
     align-items: center; /*寫在flex容器中讓flex item垂直置中*/
+    justify-content: space-between;
     }
 .nav-logo-container-box {
-    width: fit-content;
+    width: 240px;
     height: 100%;
     background-color: rgb(55, 231, 134); /*測試用*/
     }
@@ -31,17 +32,14 @@ nav {
         width:145px;
     }
 .nav-ul-link-container {
+    width:1236px;
     height: 100%;
-    width:max-content bloack size;
     background-color: rgba(0, 0, 0, 0);
     }
-.nav-li-link-container {
-    width: 80%;
-    height: 100%;
-    }
 .nav-li-link {
+    width:100%;
     display: flex;
-    justify-items: flex-end; /*讓items往mainend集中*/
+    justify-content: flex-end; /*讓items往mainend集中*/
     align-items: center;
 }
 .nav-link {
