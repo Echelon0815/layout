@@ -1,0 +1,3 @@
+1.先clone資料到 local dir
+2.看目標網頁畫 nav bar圖
+Q-1為什麼用每個DIV都使用FLEXBOX? -為了在不同寬的裝置上顯示?
