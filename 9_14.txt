@@ -29,3 +29,13 @@ Q-9怎麼讓右邊的flexbox，不要超出nav之外?為甚麼nav的padding不�
 
 發現：body裡面寫了background,background-attchment:fixed，
 	字體行距行高，等基本css
+
+9/15
+Q1 甚麼是rem,em
+	em是會根據父元素的字體大小為基準變化的單位；如root(html){font:16px}>div1{1.2em}>div2{1em}
+	這樣的情況em參考父元素，所以div1裏頭的會是16*1.2px，而div2裏頭的也是16*1.2*16px。
+	若是rem，則一開始就參考root裡的字體大小div1{1.2em}>div2{1em}，分別是16*1.2 & 16px
+
+Q2 只有數字的話需要div嗎?是為了text-align?
+
+Q3 為什麼我的flex-basis會失效？

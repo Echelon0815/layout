@@ -7,15 +7,15 @@
     <title>主網頁</title>
     <link rel="stylesheet" href="cssreset.css">
     <link rel="stylesheet" href="style.css"> <!--相對路徑同資料夾不用dot-->
-    <link rel="stylesheet" href="/section_mainvision.css"
+    <link rel="stylesheet" href="/section_mainvision.css">
 </head>
 <body>
-    <nav>
-        <div class="nav-logo-container-box"> <!--用flex讓長寬能變形-->
-            <a href=""> <!--擴大點擊範圍實際為方形-->
+    <nav><!--用flex讓長寬能變形-->
+        <div class="nav-logo-container-box"> 
+            <a class="nav-logo-a"href=""> <!--擴大點擊範圍實際為方形-->
                 <img src="/images/fm.svg" alt="" class="nav-logo1">
             </a>
-            <a href="">
+            <a class="nav-logo-a" href="">
                 <img src="/images/SchoolofBNEXT-02.svg" alt="" class="nav-logo2">
             </a>
         </div>
@@ -46,21 +46,92 @@
 
         </div>
     </nav>
-    <section class="mainvision">
-        <div class="container">
-            <div class="row">
-                <div class="MVcontainer">
-                    <div class="left">
-                        <img src="/images/bn_c_logo-01.svg" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <h5></h5>
+    <section class="s1-mainvision">
+        <div class="container s1-container">
+            <div class="s1-row">
+                <div class="s1-content-container">
+                    <div class="content-left">
+                        <img src="/images/s1-bg_01.svg" alt="">
+                        <img src="/images/s1-bg_02.svg" alt="">
+                        <img src="/images/s1-bg_03.svg" alt="">
+                        <h5><bold>敏捷，是擁抱改變，隨機應變，更是適應未來的超能力！</bold>
+                            <br>
+                            <br>
+                            面對變化愈來愈快速、難以預測的市場，
+                            <br>
+                            專業經理人們必需具備「成長思維」和「敏捷管理」的能力，
+                            <br>
+                            帶領團隊迅速採取⾏動，快速回應市場、發揮影響⼒！
+                        </h5>
                     </div>
-                    <div class="right">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                    <div class="content-right">
+                        <img src="/images/s1-bg_right.gif" alt="">
+                        <img src="/images/btn_date2.svg" alt="">
                     </div>
                 </div>
+            </div>
+        </div>
+    </section> 
+    <!--section.forumtimer>.container>.row>h5+font>form.numbers>(div>(div+p))*4-->
+    <section class="s2-forumtimer">
+        <div class="container">
+            <div class="row-flex">
+                <div class="counter-left"> <!--沒有後端，所以不使用form；元網站使用form-->
+                    <div class="numbers-wrap">
+                        <h5>活動倒數</h5>
+                        <div class="numbers numbers-days">
+                            <div>5</div>
+                            <p>DAYS</p>
+                        </div>
+                        <div class="numbers numbers-hours">
+                            <div>15</div>
+                            <p>HOURS</p>
+                        </div>
+                        <div class="numbers numbers-minutes">
+                            <div>11</div>
+                            <p>MINUTES</p>
+                        </div>
+                        <div class="numbers numbers-seconds">
+                            <div>56</div>
+                            <p>SECONDS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="counter-right newcomers"> 
+                    <h5>目前報名</h5>
+                    <div class="numbers numbers-participants">
+                        <div>306</div>
+                        <p>Participants</p>
+                    </div>
+                </div>
+                <div class="s2-btn-align-center">
+                    <a class="s2-btn" href="">席位倒數，立即報名</a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <section class="s3-expected">
+        <div class="container">
+            <div class="s2-titlebox">
+                <h2>從決策到執行，
+                    <br>
+                    啟動全員敏捷行動計劃
+                </h2>
+            </div>
+            <div class="s2-img-contanier s2-big">
+                <h3>敏捷思維</h3>
+                <img src="/images/item_2.svg" alt="" class="s2-img"></div>
+            <div class="s2-img-contanier">
+                <img src="/images/item_5.svg" alt="" class="s2-img"></div>
+            <div class="s2-img-contanier s2-big">
+                <h3>數據決策</h3>
+                <img src="/images/item_3.svg" alt="" class="s2-img"></div>
+            <div class="s2-img-contanier">
+                <img src="/images/item_4.svg" alt="" class="s2-img"></div>
+            <div class="s2-img-container s2-big">
+                <h3>敏捷創新</h3>
+                <img src="/images/item_6.svg" alt="" class="s2-img">
             </div>
         </div>
     </section>
