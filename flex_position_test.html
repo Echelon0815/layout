@@ -24,16 +24,21 @@
         background-color: pink;
         position: relative;
     }
+    /*用opacity控制突然出現的突兀感*/
     .inner {
         background-color: rgb(60, 255, 0);
         position: absolute;
         height: 100%;
         width: 100%;
         top: 100px;
-        transition: .9s;
+        transition: .3s;
+        visibility: hidden;
+        opacity: 0.1;
     }
     .box:hover .inner{
-        top:0px
+        top:0px;
+        visibility: visible;
+        opacity: 1;
     }
     </style>
         <!--爆版為什麼?-->>
@@ -45,36 +50,37 @@
                 <p>我是測試文章</p>
             </div>
         </div>
-        <div class="box fbox2">Flexbox2
-            <div class="inner">
-                <p>我是測試文章</p>
-        </div>
-        <div class="box fbox3">Flexbox3
+        <div class="box fbox1">Flexbox2
             <div class="inner">
                 <p>我是測試文章</p>
             </div>
         </div>
-        <div class="box fbox4">Flexbox4
+        <div class="box fbox1">Flexbox3
             <div class="inner">
                 <p>我是測試文章</p>
             </div>
         </div>
-        <div class="box fbox5">Flexbox5
+        <div class="box fbox1">Flexbox4
             <div class="inner">
                 <p>我是測試文章</p>
             </div>
         </div>
-        <div class="box fbox6">Flexbox6
+        <div class="box fbox1">Flexbox5
             <div class="inner">
                 <p>我是測試文章</p>
             </div>
         </div>
-        <div class="box fbox7">Flexbox7
+        <div class="box fbox1">Flexbox6
             <div class="inner">
                 <p>我是測試文章</p>
             </div>
         </div>
-        <div class="box fbox8">Flexbox8
+        <div class="box fbox1">Flexbox7
+            <div class="inner">
+                <p>我是測試文章</p>
+            </div>
+        </div>
+        <div class="box fbox1">Flexbox8
             <div class="inner">
                 <p>我是測試文章</p>
             </div>
