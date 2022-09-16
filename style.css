@@ -1,4 +1,7 @@
 /*flex-direction讓item從上到下，從左到右，或相反...*/
+/*在元網頁的文件裏頭，有個偽元素選擇器，把所有人都變成了border-box*/
+/* ::after::before{box-sizing: border-box;} */
+/*學習新的css寫法*/
 body{
     background-image: url(/images/bg-main-ver2.jpg);
     background-attachment: fixed; /*背景不會隨拖拉變化*/
@@ -7,14 +10,33 @@ body{
     line-height: 1.5; /*寫在body裡面統一文字格式*/
     font-size: 16px;
     font-style: normal;
-    font-
+    font-family: 'Noto Sans TC','微軟正黑體', 'Arial Narrow,'Rubik', 'Noto Sans TC', sans-serif';
+    color:#1E1E1E;
+    font-weight: 400;
+    text-align: left;
     }
+/*為什麼要重複宣告?*/
+h1,h2,h3,h4,h5,h6{
+    line-height: 1.5;
+}
+h3,h5 {
+    font-size: 1.5rem;
+}
+p {
+    font-size: 1rem;
+}
+
 .container {
         max-width: 1280px;
         border: 2px solid red;
         margin-left: auto;
         margin-right: auto;
+        background-color:white;
+        padding: 2rem 2rem 3rem;
+        box-sizing: border-box;
     }
+/*網頁中有很多元件被分類之後重新運用，某些section開頭的就是*/
+/*可以在繼承欄中，按一個像是電腦晶片的東西，顯示出來*/
 nav {
     padding: 0px 30px;
     box-sizing: border-box;
@@ -49,18 +71,18 @@ nav {
     background-color: rgba(0, 0, 0, 0);
     justify-content: flex-end;
     }
-    .nav-li-link {
+        .nav-li-link {
     flex-shrink: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center; /*讓items往mainend集中*/
     align-items: center;
     }
-    .nav-link {
+            .nav-link {
     margin: 10px 0 10px 12px;
     box-sizing: border-box;
     }   
-    .nav-link a {
+            .nav-link a {
     color: #ffff;
     background-color: rgba(170, 113, 28, 0.548);
     padding: 8px;
@@ -149,13 +171,82 @@ section.s2-forumtimer {
         background-color: #004FD8;
         border:1px solid black;
     }
-.s2-btn-align-center {
+        .s2-btn-align-center {
     max-width: 100%;
     flex: 0 0 100%;
     text-align: center;
     border:2px solid brown;
 }
-.s2-btn {
+        .s2-btn {
     background-color: white;
     color:#1E1E1E;
+}
+section.s2-forumtimer{
+
+}
+/*網頁製作者都有指定好字體和大小，這裡幾乎沒寫東西*/
+    .s3-titlebox {
+        font-style: italic;
+        font-size: 2.8rem;
+        font-weight: 600;
+    }
+
+    
+    .s3-img-wrapper {
+        display:flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    /*flex-basis好好用阿*/
+        .s3-big {
+            position: relative; /*為了比svg高一層*/
+            flex:0 0 25%;
+            max-width: 25%;
+            padding: 0 5px;
+            box-sizing: border-box;
+        }
+        .s3-big h3 {
+            line-height: 1.5;
+        }
+        .s3-small {
+            flex:0 0 8.333%;
+            
+        }
+        /*這裡使用到新屬性Transform，可以操蹤元素變形、移動、旋轉*/
+        /*Scale (0.5,1)寬一半，高不變
+            Translate (120px,50%)向右120px，向下(母元素50%)
+            Rotate(0.5turn)轉半圈..matrix和skew我還不會
+            可以同時使用多個
+        */
+        .s3-img {
+            width: 45%;
+        }
+        .s3-decor { 
+            width: 250%;
+            transform: translate(-80px,60px);
+        }
+
+section.s4-teacher 
+
+.s4-mainarea{
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    }
+.s4-mainarea .card {
+    flex:0 0 33%;
+}
+.teacher-img {
+    width: 100%;
+}
+section.s5-mbr-counter
+
+.s5-maincontainer  {
+    width: 100%;
+    display: flex;
+    flex-wrap: row wrap;
+}
+.contentbox {
+    flex:0 0 25%;
+    border:1px solid red;
 }
