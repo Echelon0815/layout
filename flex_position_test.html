@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-Position-Test</title>
+    <style>
+    .container .box {
+        box-sizing: border-box;
+    }
+    .container {
+        width: 200px;
+        height: 400px;
+        border: 1px solid black;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+    .box {
+        width: 100px;
+        height: 100px;
+        border:1px solid red;
+        background-color: pink;
+        position: relative;
+    }
+    .inner {
+        background-color: rgb(60, 255, 0);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 100px;
+        transition: .9s;
+    }
+    .box:hover .inner{
+        top:0px
+    }
+    </style>
+        <!--爆版為什麼?-->>
+</head>
+<body>
+    <div class="container">
+        <div class="box fbox1">Flexbox1
+            <div class="inner">
+                <p>我是測試文章</p>
+            </div>
+        </div>
+        <div class="box fbox2">Flexbox2
+            <div class="inner">
+                <p>我是測試文章</p>
+        </div>
+        <div class="box fbox3">Flexbox3
+            <div class="inner">
+                <p>我是測試文章</p>
+            </div>
+        </div>
+        <div class="box fbox4">Flexbox4
+            <div class="inner">
+                <p>我是測試文章</p>
+            </div>
+        </div>
+        <div class="box fbox5">Flexbox5
+            <div class="inner">
+                <p>我是測試文章</p>
+            </div>
+        </div>
+        <div class="box fbox6">Flexbox6
+            <div class="inner">
+                <p>我是測試文章</p>
+            </div>
+        </div>
+        <div class="box fbox7">Flexbox7
+            <div class="inner">
+                <p>我是測試文章</p>
+            </div>
+        </div>
+        <div class="box fbox8">Flexbox8
+            <div class="inner">
+                <p>我是測試文章</p>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+</html>
