@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector_Test</title>
+    <style> /*元素選擇器的會影響後裔*/
+            /*元素選擇器就像後裔選擇器，不論距離*/
+            
+
+        body {
+            color:burlywood;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+        }
+        ul {
+            color:red;
+        }
+        ol {
+            color:green;
+        }
+        
+        #Big-deal {
+            color:cyan;
+        }
+        /*id,class,atrribute選擇器都會被大小寫影響*/
+        #Big-Deal {
+            color:yellow;
+        }
+        /*attribute 屬性選擇器，擁有class屬性的li元素都被選取*/
+        li[class] {
+            color:black;
+            font-size: 20px;
+        }
+        /*同時擁有class和id屬性的li元素會被選取，但是id的權重大於attribute選擇器，故顏色失效*/
+        li[class][id] {
+            color:black;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="third-ele">
+        <ul class="fourth-ul">無順序表單
+            <li class="fifth-li">無順序表單內容一</li>
+            <li class="fifth-li">無順序表單內容二</li>
+            <li class="fifth-li" id="Big-Deal">無順序表單內-新有序表單
+                <ol class="sixth-ol">新有序表單
+                    <li class="seventh-li">新有序表單內容一</li>
+                    <li class="seventh-li">新有序表單內容二</li>
+                    <li class="seventh-li">新有序表單內容三</li>
+                </ol>
+
+            </li>
+        </ul>
+        <ol class="fouth-ol">順序表單
+            <li class="fifth-li">順序表單內容一</li>
+            <li class="fifth-li">順序表單內容二</li>
+            <li class="fifth-li">順序表單內-新表單
+                <ul class="sixth-ul">新無順序表單 <!--此處的新無序表單會是紅色，它也被元素選擇器給選中了-->
+                    <li class="seventh-li">新無順序表單內容1</li>
+                    <li class="seventh-li">新無順序表單內容2</li>
+                    <li class="seventh-li">新無順序表單內容3</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+</body>
+</html>
