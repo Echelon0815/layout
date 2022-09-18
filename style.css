@@ -369,6 +369,7 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
             flex:0 0 33.33%;
             box-sizing: border-box;
             padding:10px;
+            height: 460px;
             background-color: #fff;
             position: relative;
             border: 2px solid #1E1E1E;
@@ -396,8 +397,10 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
                         margin: 20px 0 0 -10px;
                         font-size: 1.2rem;
                     }
-
+                        /*用absolute移動空間、在操作大容器的高？*/
                     #teacher .name-flex {
+                        position: absolute;
+                        bottom:0px;
                         display:flex;
                         flex-wrap:nowrap;
                         width: 100%;
@@ -423,11 +426,11 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
                     background-color:#bfffe7;
                     position: absolute;
                     box-sizing:border-box;
-                    top: 50%;
+                    top: 70px;
                     left: 0px;
                     height: 100%;
                     width: 100%;
-                    opacity: 0.1;
+                    opacity: 0.01;
                     visibility: hidden;
                     display: flex;
                     flex-direction: column;
@@ -436,12 +439,14 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
                     font-size: large;
                     text-align:start;
                     word-break: break-word;
+                    transition: all .2s ease-out;
                 }
                     #teacher .card-container-flex:hover .inner {
-                        top:0px;
-                        transition: .6s;
+                        top: 0px;
+                        transition: all .35s ease-out;
                         visibility: visible;
                         opacity: 1;
+
                     }
 
 
