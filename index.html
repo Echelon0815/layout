@@ -5,54 +5,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>主網頁</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!--載入google字形-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="cssreset.css">
     <link rel="stylesheet" href="style.css"> <!--相對路徑同資料夾不用dot-->
 </head>
 <body>
-    <nav><!--用flex讓長寬能變形-->
-        <div class="nav-logo-container-box"> 
+    <nav id="nav" class="nav nav-flex"><!--用flex讓長寬能變形-->
+        <div class="logo-container-box-flex"> 
             <a class="nav-logo-a"href=""> <!--擴大點擊範圍實際為方形-->
-                <img src="/images/fm.svg" alt="" class="nav-logo1">
+                <img src="/images/fm.svg" alt="" class="fm-img">
             </a>
             <a class="nav-logo-a" href="">
-                <img src="/images/SchoolofBNEXT-02.svg" alt="" class="nav-logo2">
+                <img src="/images/SchoolofBNEXT-02.svg" alt="" class="bnext-img">
             </a>
         </div>
-        <div class="nav-ul-link-container">
-            <ul class="nav-li-link">
-                <li class="nav-link">
+        <div class="ul-link-wrapper-flex">
+            <ul class="link-container-flex">
+                <li class="link">
                     <a href="">講者陣容</a>
                 </li>
-                <li class="nav-link">
+                <li class="link">
                     <a href="">精彩議程</a>
                 </li>
-                <li class="nav-link">
+                <li class="link">
                     <a href="">關於未來經理人</a>
                 </li>
-                <li class="nav-link">
+                <li class="link">
                     <a href="">品牌合作</a>
                 </li>
-                <li class="nav-link">
+                <li class="link">
                     <a href="">活動資訊</a>
                 </li>
-                <li class="nav-link-main-container">
+                <li class="link-main-container">
                     <a href="" id="nav-link-main">立即報名</a>
                 </li>
-                <li class="nav-link-btn">
-                    <img src="/images/FBshare.svg" alt="" class="nav-link-fb-logo">
+                <li class="link-fb-btn">
+                    <img src="/images/FBshare.svg" alt="" class="link-fb-logo">
                 </li>
             </ul>
 
         </div>
     </nav>
-    <section class="s1-mainvision">
-        <div class="container s1-container">
-            <div class="s1-row">
-                <div class="s1-content-container">
+    <section id="mainvision">
+        <div class="container s1-wrapper">
+                <div class="content-container">
                     <div class="content-left">
-                        <img src="/images/s1-bg_01.svg" alt="">
-                        <img src="/images/s1-bg_02.svg" alt="">
-                        <img src="/images/s1-bg_03.svg" alt="">
+                        <img class="content-left-pop" src="/images/s1-bg_01.svg" alt="">
+                        <img class="content-left-slogan"src="/images/s1-bg_02.svg" alt="">
+                        <img class="content-left-pop" src="/images/s1-bg_03.svg" alt="">
                         <h5><bold>敏捷，是擁抱改變，隨機應變，更是適應未來的超能力！</bold>
                             <br>
                             <br>
@@ -64,20 +66,21 @@
                         </h5>
                     </div>
                     <div class="content-right">
-                        <img src="/images/s1-bg_right.gif" alt="">
-                        <img src="/images/btn_date2.svg" alt="">
+                        <img id="mainvision-img"src="/images/s1-bg_right.gif" alt="">
+                        <img class="content-right-side-img"src="/images/btn_date2.svg" alt="">
                     </div>
                 </div>
-            </div>
         </div>
     </section> 
     <!--section.forumtimer>.container>.row>h5+font>form.numbers>(div>(div+p))*4-->
-    <section class="s2-forumtimer">
+    <section id="forumtimer">
         <div class="container">
             <div class="row-flex">
                 <div class="counter-left"> <!--沒有後端，所以不使用form；元網站使用form-->
                     <div class="numbers-wrap">
+                        <div>
                         <h5>活動倒數</h5>
+                        </div>
                         <div class="numbers numbers-days">
                             <div>5</div>
                             <p>DAYS</p>
@@ -96,30 +99,30 @@
                         </div>
                     </div>
                 </div>
-                <div class="counter-right newcomers"> 
+                <div class="counter-right"> 
                     <h5>目前報名</h5>
                     <div class="numbers numbers-participants">
                         <div>306</div>
                         <p>Participants</p>
                     </div>
                 </div>
-                <div class="s2-btn-align-center">
+                <div class="btn-align-center">
                     <a class="s2-btn" href="">席位倒數，立即報名</a>
                 </div>
                 
             </div>
         </div>
     </section>
-    <section class="s3-expected">
+    <section id="info">
         <div class="container">
-            <div class="s3-titlebox">
+            <div class="titlebox">
                 <h2>從決策到執行，
                     <br>
                     啟動全員敏捷行動計劃
                 </h2>
             </div>
-            <div class="s3-img-wrapper">
-                <div class="s3-img-contanier s3-big">
+            <div class="img-wrapper">
+                <div class="img-contanier s3-big">
                     <h3>敏捷思維</h3>
                     <img src="/images/item_2.svg" alt="" class="s3-img">
                     <p>由上至下注入敏捷精神，文化決定你的極限！
@@ -140,19 +143,22 @@
                         以簡馭繁、縮短決策流程，做正確的事。
                     </p></div>
                 <div class="s3-img-contanier s3-small">
-                    <img src="/images/item_4.svg" alt="" class="s3-decor"></div>
+                    <img src="/images/item_6.svg" alt="" class="s3-decor"></div>
                 <div class="s3-img-container s3-big">
                     <h3>敏捷創新</h3>
-                    <img src="/images/item_6.svg" alt="" class="s3-img">
+                    <img src="/images/item_4.svg" alt="" class="s3-img">
                     <p>抓住市場脈動，快速試錯、小步快跑、持續學習；一套還不錯又可以順利運作的系統才是好系統。讓團隊進入高效生產狀態，用一半時間做兩倍的事。
                     </p></div>
             </div> 
         </div>
     </section>
-    <section class="s4-teacher">
+    <section id="teacher">
         <div class="container">
-            <div class="title"></div>
-            <div class="s4-mainarea">
+            <div class="title">
+                <h2>講師陣容</h2>
+                <h3>Speakers</h3>
+            </div>
+            <div class="mainarea">
                 <div class="card">
                     <div>
                         <img src="/images/teacher011.jpg" alt="" class="teacher-img">

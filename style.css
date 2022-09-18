@@ -10,25 +10,24 @@ body{
     line-height: 1.5; /*寫在body裡面統一文字格式*/
     font-size: 16px;
     font-style: normal;
-    font-family: 'Noto Sans TC','微軟正黑體', 'Arial Narrow,'Rubik', 'Noto Sans TC', sans-serif';
+    font-family: 'Noto Sans TC','微軟正黑體', 'Arial Narrow, sans-serif';
     color:#1E1E1E;
     font-weight: 400;
     text-align: left;
+    
+    /* box-sizing: border-box; box-sizing不會影響後裔 */
     }
 /*為什麼要重複宣告?*/
-h1,h2,h3,h4,h5,h6{
-    line-height: 1.5;
+/*超連接虛擬類別*/
+a, a:focus,a:active,a:visited {
+    text-decoration: none;
 }
-h3,h5 {
-    font-size: 1.5rem;
-}
-p {
-    font-size: 1rem;
-}
+
 
 .container {
         max-width: 1280px;
         border: 2px solid red;
+        margin-top: -18px;
         margin-left: auto;
         margin-right: auto;
         background-color:white;
@@ -37,208 +36,318 @@ p {
     }
 /*網頁中有很多元件被分類之後重新運用，某些section開頭的就是*/
 /*可以在繼承欄中，按一個像是電腦晶片的東西，顯示出來*/
-nav {
+/*從nav來設定顏色影響後裔*/
+/*用id來創造可讀性?*/
+/*----------nav----------*/
+#nav {
     padding: 0px 30px;
     box-sizing: border-box;
     position: fixed;
     width: 100%;
-    height: 80 px; /*怎麼決定的?*/
+    height: 80px; 
     background-color: rgba(0, 0, 0, 1);
-    display: flex;
-    align-items: center; /*寫在flex容器中讓flex item垂直置中*/
+    align-items: center; 
+    /*寫在flex容器中讓flex item垂直置中*/
     justify-content: space-between;
+    display: flex;
+    z-index: 10;
     }
     /*用flexbox讓img可以並排，但是為什麼普通的block和inline不行?*/
-    .nav-logo-container-box {
-    flex-basis: 240px;
-    min-width: 240px;
-    height: 100%;
-    background-color: rgb(55, 231, 134);
-    display: flex;
-    align-items: center;
-    }
-    /*寫在container下面以免被覆蓋*/
-    .nav-logo1 {
-    width: 100px;
-    }
-    .nav-logo2 {
-    width:140px;
-    }
-    .nav-ul-link-container {
-    flex-grow: 1;
+    #nav .logo-container-box-flex {
+        flex:0 0 240px; /*grow=0 ,shrink=0*/
+        height: 100%;
+        background-color: rgba(0, 0, 0, 1);
+        align-items: center;
+        display: flex;
+        }
+    
+        #nav .fm-img {
+            width: 100px;
+            vertical-align: middle;
+            }
+        #nav .bnext-img {
+            width:140px;
+            vertical-align: middle;
+            }
+    #nav .ul-link-wrapper-flex {
+    flex-grow: 1; /*在grow為正整數且其他item為零的情況下所有餘寬都給這item*/
     display: flex;
     height: 100%;
     background-color: rgba(0, 0, 0, 0);
     justify-content: flex-end;
     }
-        .nav-li-link {
-    flex-shrink: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /*讓items往mainend集中*/
-    align-items: center;
-    }
-            .nav-link {
-    margin: 10px 0 10px 12px;
-    box-sizing: border-box;
-    }   
-            .nav-link a {
-    color: #ffff;
-    background-color: rgba(170, 113, 28, 0.548);
-    padding: 8px;
-    height: 40px;
-    box-sizing: border-box;
-    text-align: center; /*讓所有連接字置中*/
-    flex-shrink: 0;
-    }
-    .nav-link-main-container{
-    flex-shrink: 0;
-    margin:10px 0px 10px 12px;
-    }
-
-    #nav-link-main {
-    background-color: #BBFF00;
-    color:#1E1E1E;
-    height: 33.6px;
-    box-sizing: border-box;
-    border: 2px solid white;
-    padding: 3px 13px;
-    margin: 13px 3px;
-    vertical-align: center;
-    }
-    .nav-link-btn{
-    flex-shrink: 0;
-    padding: 8px;
-    }
-    .nav-link-fb-logo{
-    height: 25px;
-    width: 25px;
-    }
-/*甚麼是rem,em*/
-section.s1-mainvision {
-    box-sizing: border-box;
-    padding-top: 7rem;
-    background-color: pink;
-    }
-    .s1-container {
-    box-sizing: border-box;
-    padding: 3rem 2rem 5rem;
-    }
-    .s1-content-container {
-        display: flex;
-    }
-    .content-left {
-        flex:0 0 58.3333%;
-    }
-        .conten-left img {
-            max-width: 100%;
-        }
-    .content-right {
-        flex:0 0 41.7777%;
-        display:flex;
-        flex-direction: column;
-    }
-        .content-right img {
-            max-width:100%;
-        }
-section.s2-forumtimer {
-    background-color: #00ED91;
-    }    
-    .row-flex {
+        #nav .link-container-flex {
+        flex:0 0 100%;
         display: flex;
         flex-wrap: wrap;
-        justify-content:space-evenly;
-    }
-    .counter-left {
-        display: flex;
-        flex: 0 0 65%;  /*不放大，不縮小，就是65%寬*/
-        background-color: #004FD8;
-        justify-content: center;
-    }
-        .numbers-wrap {
-        display: flex;
-        flex-wrap: nowrap;
-        background-color: #004FD8;
-        border:1px solid pink;
-    }
-        .numbers {
-        max-width: 96.8px;
-        background-color: #004FD8;
-    }
-    .counter-right {
-        display: flex;
-        flex: 0 0 25%;
-        background-color: #004FD8;
-        border:1px solid black;
-    }
-        .s2-btn-align-center {
-    max-width: 100%;
-    flex: 0 0 100%;
-    text-align: center;
-    border:2px solid brown;
-}
-        .s2-btn {
-    background-color: white;
-    color:#1E1E1E;
-}
-section.s2-forumtimer{
+        justify-content: flex-end; /*讓items往main-end集中*/
+        align-items: center;
+        }
+            #nav .link {
+            height: 40px;
+            margin-left: 20px;
+            margin-top: 20px;
+            box-sizing: border-box;
+            }   
+                #nav .link a {
+                color: #ffff;
+                background-color: rgba(0, 0, 0, 0);
+                padding: 8px;
+                box-sizing: border-box;
+                text-align: center; /*讓所有連接字置中*/
+                flex:0 0 auto; /*flex-basis auto代表 依照content大小決定寬*/
+                }
+            #nav .link-main-container{
+            flex:0 0 auto;
+            margin:10px 0px 10px 12px;
+            }
 
-}
+                #nav-link-main {
+                background-color: #BBFF00;
+                color:#1E1E1E;
+                box-sizing: border-box;
+                padding: .2rem .8rem;
+                margin-left: 15px;
+                margin-right: 20px;
+                font-weight: bold;
+                border: 2px solid white;
+                vertical-align: middle;}
+                #nav-link-main:hover,#nav-link-main:active {
+                    transition: .3s;
+                    color:#fff;
+                    background-color: #004FD8;
+                    border: 2px solid #004FD8;}
+            #nav .link-fb-btn{
+            flex:0 0 auto;
+            padding:0 .5em;
+            }
+                #nav .link-fb-logo{
+                vertical-align: middle; /*讓img在容器內垂直置中*/
+                height: 25px;
+                width: 25px;
+                }
+/*甚麼是rem,em→rem依照root element (html)宣告的字形做基準為一倍 ；em依照parents*/
+/*----------mainvision----------*/
+#mainvision {
+    box-sizing: border-box;
+    padding-top: 7rem;
+    }
+    #mainvision .s1-wrapper {
+    box-sizing: border-box;
+    padding:50px 55px 60px 55px;
+    }
+        #mainvision .content-container {
+            display: flex;
+        }
+            #mainvision .content-left {
+                flex:0 0 58.3333%;
+                max-width: 58.3333%;
+                padding-right: 15px;
+            }
+            #mainvision .content-left img, 
+            #mainvision .content-left h5 {
+                padding-bottom: 20px;
+            }
+            #mainvision .content-left-pop {
+                    max-width: 65%;
+                    padding-right: 15px;
+                }
+            #mainvision .content-left-slogan {
+                max-width: 94%;
+            }
+            #mainvision .content-left h5 {
+                line-height: 1.8;
+                font-weight:400;
+                font-size: 25px;
+                margin-bottom: 30px;
+            }
+            #mainvision .content-right {
+                flex:0 0 41.7777%;
+                display:flex;
+                flex-direction: column;
+            }
+                #mainvision-img {
+                    max-width:100%;
+                    transform: scale(1.2);
+                }
+                #mainvision .content-right-side-img {
+                    width: 400px;
+                    transform: translateX(-20px);
+                    transform: translateY(20px);
+                }
+
+/*----------forumtimer----------*/
+
+
+#forumtimer {
+    background-color: #00ED91;
+    }
+    #forumtimer .container {
+        background-color: #00ED91;
+    }
+        #forumtimer .row-flex {
+            background-color: #00ED91;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-evenly;
+            color: #fff;
+        }
+        /*class屬性值開頭為counter的*/
+            #forumtimer  [class ^="counter"] {
+                background-color: #004FD8;
+                box-sizing: border-box;
+                justify-content: center;
+                padding: 25px;
+                justify-content: center;
+                display: flex;
+                border-radius: 10px;
+            }
+            #forumtimer p {
+                margin-top: 3px;
+            }
+
+            #forumtimer .counter-left {
+                flex: 0 0 55%;
+                }
+
+                #forumtimer .numbers-wrap {
+                display:flex;
+                flex-wrap: nowrap;
+                background-color: #004FD8;
+                justify-content:space-evenly;
+                width: 100%;
+                
+                }
+                #forumtimer h5 {
+                    font-size: 1.35rem;
+                }
+                    #forumtimer .numbers {
+                    max-width: 96.8px;
+                    background-color: #004FD8;
+                    }
+                    #forumtimer .numbers div{
+                        width: 100%;
+                        background-color: #004FD8;
+                        font-size: 2.6rem;
+                        font-weight: 700;
+                        text-align: center;
+                        }
+            #forumtimer .counter-right {
+            flex: 0 0 25%;
+            justify-content: space-evenly;
+            }
+
+            #forumtimer .btn-align-center {
+            max-width: 100%;
+            flex: 0 0 100%;
+            text-align: center;
+            box-sizing: border-box;
+            margin-top: 1rem;
+            padding: 1rem;
+            }
+                #forumtimer .s2-btn {
+                transition: .5s;
+                line-height: 2;
+                padding: 5px;
+                font-weight: bolder;
+                font-size: 23px;
+                padding: 10px;
+                background-color: white;
+                border:1px solid #1E1E1E;
+                color:#1E1E1E;
+                box-shadow:-7.5px 7.5px 0px #1e1e1e
+                }
+                #forumtimer .s2-btn:hover ,
+                .s2-btn:active {
+                    transition: .8s;
+                    color: #BBFF00;
+                    background-color: #1e1e1e;
+                    box-shadow: none;
+                }
+
+/*----------agenda----------*/
+
+
 /*網頁製作者都有指定好字體和大小，這裡幾乎沒寫東西*/
-    .s3-titlebox {
+    #info .container {
+        margin-top: 0px;
+    }
+    #info .titlebox {
         font-style: italic;
-        font-size: 2.8rem;
-        font-weight: 600;
+        font-size: 3rem;
+        font-weight: 700;
+        position: relative;
+        
+    }
+    /*before使用absolute的時候，依舊被relative的titlebox影響*/
+    #info .titlebox::before {
+        content: "";
+        width: 100px;
+        height: 100px;
+        background-image: url(/images/item_7.svg);
+        background-color: transparent;
+        position: absolute;
+        left: 25%;
     }
 
     
-    .s3-img-wrapper {
-        display:flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-    }
-    /*flex-basis好好用阿*/
-        .s3-big {
-            position: relative; /*為了比svg高一層*/
-            flex:0 0 25%;
-            max-width: 25%;
-            padding: 0 5px;
+        #info .img-wrapper {
+            display:flex;
+            flex-wrap: nowrap;
+            justify-content: space-around;
             box-sizing: border-box;
+            padding:20px 5px 0px 50px;
         }
-        .s3-big h3 {
-            line-height: 1.5;
-        }
-        .s3-small {
-            flex:0 0 8.333%;
+
+            #info .s3-big {
+                flex:0 0 25%;
+                max-width: 25%;
+                padding: 0 5px;
+                box-sizing: border-box;
+            }
+            #info .s3-big h3 {
+                line-height: 1.5;
+                font-size: 22px;
+                font-weight: bold;
+            }
+            #info .s3-small {
+                flex:0 0 8.333%;
+            }
+            #info .s3-img {
+                width: 50%;
+            }
+            #info .s3-decor { 
+                width: 215%;
+                transform: translate(-80px,25px);
+            }
             
-        }
-        /*這裡使用到新屬性Transform，可以操蹤元素變形、移動、旋轉*/
-        /*Scale (0.5,1)寬一半，高不變
-            Translate (120px,50%)向右120px，向下(母元素50%)
-            Rotate(0.5turn)轉半圈..matrix和skew我還不會
-            可以同時使用多個
-        */
-        .s3-img {
-            width: 45%;
-        }
-        .s3-decor { 
-            width: 250%;
-            transform: translate(-80px,60px);
-        }
+/*這裡使用到新屬性Transform，操蹤元素變形、移動、旋轉*/
+/*Scale (0.5,1)寬一半，高不變
+Translate (120px,50%)向右120px，向下(母元素50%)
+rotate(0.5turn)轉半圈，可以同時使用多個*/
 
-section.s4-teacher 
+/*----------teacher----------*/
 
-.s4-mainarea{
+#teacher .title {
+
+}
+
+#teacher .mainarea{
     box-sizing: border-box;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: row wrap;
     }
-.s4-mainarea .card {
-    flex:0 0 33%;
-}
-.teacher-img {
-    width: 100%;
-}
+    #teacher .card {
+    flex:0 0 33.3333%;
+    }
+        #teacher.teacher-img {
+            width: 100%;
+        }
+
+
+
+
+
 section.s5-mbr-counter
 
 .s5-maincontainer  {
