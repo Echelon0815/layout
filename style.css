@@ -23,11 +23,13 @@ a, a:focus,a:active,a:visited {
     text-decoration: none;
 }
 
+h1,h2,h3,h4,h5,h6,p {
+    line-height: 1.5;
+}
 
 .container {
         max-width: 1280px;
         border: 2px solid red;
-        margin-top: -18px;
         margin-left: auto;
         margin-right: auto;
         background-color:white;
@@ -38,6 +40,20 @@ a, a:focus,a:active,a:visited {
 /*可以在繼承欄中，按一個像是電腦晶片的東西，顯示出來*/
 /*從nav來設定顏色影響後裔*/
 /*用id來創造可讀性?*/
+.title>h2 {
+    font-size: 2.8rem;
+    font-style: italic;
+    font-weight: 700;
+}
+.title>h3 {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-top: -10px;
+}
+.title {
+    box-sizing: border-box;
+    margin-bottom: 60px;
+}
 /*----------nav----------*/
 #nav {
     padding: 0px 30px;
@@ -53,6 +69,11 @@ a, a:focus,a:active,a:visited {
     z-index: 10;
     }
     /*用flexbox讓img可以並排，但是為什麼普通的block和inline不行?*/
+    
+#nav .container {
+    margin-top: -18px;
+}
+    
     #nav .logo-container-box-flex {
         flex:0 0 240px; /*grow=0 ,shrink=0*/
         height: 100%;
@@ -145,7 +166,7 @@ a, a:focus,a:active,a:visited {
                 padding-right: 15px;
             }
             #mainvision .content-left img, 
-            #mainvision .content-left h5 {
+            #mainvision .content-left p {
                 padding-bottom: 20px;
             }
             #mainvision .content-left-pop {
@@ -155,7 +176,7 @@ a, a:focus,a:active,a:visited {
             #mainvision .content-left-slogan {
                 max-width: 94%;
             }
-            #mainvision .content-left h5 {
+            #mainvision .content-left p {
                 line-height: 1.8;
                 font-weight:400;
                 font-size: 25px;
@@ -184,6 +205,7 @@ a, a:focus,a:active,a:visited {
     }
     #forumtimer .container {
         background-color: #00ED91;
+        padding-top: 50px;
     }
         #forumtimer .row-flex {
             background-color: #00ED91;
@@ -219,7 +241,7 @@ a, a:focus,a:active,a:visited {
                 
                 }
                 #forumtimer h5 {
-                    font-size: 1.35rem;
+                    font-size: 1.5rem;
                 }
                     #forumtimer .numbers {
                     max-width: 96.8px;
@@ -326,25 +348,101 @@ a, a:focus,a:active,a:visited {
 Translate (120px,50%)向右120px，向下(母元素50%)
 rotate(0.5turn)轉半圈，可以同時使用多個*/
 
+
+
 /*----------teacher----------*/
 
-#teacher .title {
-
+#teacher .container {
+    background-color: transparent;
 }
 
-#teacher .mainarea{
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: row wrap;
+    #teacher .card-wrapper-flex {
+        display: flex;
+        flex-wrap:wrap;
+        max-width: 90%;
+        margin: 0 auto;
+        border:1px solid brown;
+        
     }
-    #teacher .card {
-    flex:0 0 33.3333%;
-    }
-        #teacher.teacher-img {
-            width: 100%;
-        }
 
+            #teacher .card-container-flex {
+            flex:0 0 33.33%;
+            box-sizing: border-box;
+            padding:10px;
+            background-color: #fff;
+            position: relative;
+            border: 2px solid #1E1E1E;
+            }
+                /* #teacher .omote {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content:flex-end;
+                } */
+                    #teacher .teacher-frame {
+                        height: 300px;
+                        width: 100%;
+                        border-radius: 0 50px 0 0;
+                        overflow: hidden;
+                        }
+                            #teacher .teacher-img {
+                                width: 100%;
+                            }
+                    /*瞎用fit-content給矇中了*/
+                    #teacher h4 {
+                        width:fit-content;
+                        background-color: #00ED91;
+                        box-sizing: border-box;
+                        padding:9px;
+                        margin: 20px 0 0 -10px;
+                        font-size: 1.2rem;
+                    }
 
+                    #teacher .name-flex {
+                        display:flex;
+                        flex-wrap:nowrap;
+                        width: 100%;
+                        height: 50px;
+                        align-content: flex-end;
+                        }
+
+                        #teacher .arrow {
+                            width: 70%;
+                            flex: 0 0 auto;
+                        }
+
+                        #teacher h5 {
+                            flex:1 0 auto;
+                            font-size: 1.5rem;
+                            font-weight: 400;
+                            padding: 3px;
+
+                        }
+
+                    /*加上這個left才弄好，為甚麼預設會往右偏?*/
+                #teacher .inner {
+                    background-color:#bfffe7;
+                    position: absolute;
+                    box-sizing:border-box;
+                    top: 50%;
+                    left: 0px;
+                    height: 100%;
+                    width: 100%;
+                    opacity: 0.1;
+                    visibility: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 15px;
+                    font-size: large;
+                    text-align:start;
+                    word-break: break-word;
+                }
+                    #teacher .card-container-flex:hover .inner {
+                        top:0px;
+                        transition: .6s;
+                        visibility: visible;
+                        opacity: 1;
+                    }
 
 
 
