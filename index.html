@@ -7,6 +7,8 @@
     <title>主網頁</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"> <!--載入google字形-->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="cssreset.css">
     <link rel="stylesheet" href="style.css"> <!--相對路徑同資料夾不用dot-->
@@ -307,37 +309,37 @@
             </div>
                     
     </section>
-    <section class="s5-mbr-counter">
+    <section id="mbrcounter">
         <div class="container">
-            <div class="title-box3">
+            <div class="title">
                 <h2>前瞻思維，擁抱改變</h2>
                 <h3>Lead change. Drive agility. Deliver value.</h3>
             </div>
-            <div class="s5-maincontainer">
+            <div class="maincontainer">
                 <div class="contentbox">
                         <div class="numbox">
-                            <h4>7</h4>
+                            <h4 class="animation">7</h4>
                             <small>位</small>
                         </div>
                         <h5>重量級講師</h5>
                 </div>
                 <div class="contentbox">
                         <div class="numbox">
-                        <h4>6</h4>
+                        <h4 class="animation">6</h4>
                         <small>小時</small>
                         </div>
                         <h5>輪番登場演講</h5>
                 </div>
                 <div class="contentbox">
                         <div class="numbox">
-                        <h4>50</h4>
+                        <h4 class="animation">50</h4>
                         <small>分鐘</small>
                         </div>
                     <h5>經營心法大公開</h5>
                 </div>
                 <div class="contentbox">
                         <div class="numbox">
-                        <h4>300</h4>
+                        <h4 class="animation">300</h4>
                         <small>位</small>
                         </div>
                     <h5>業界菁英匯聚交流</h5>
@@ -345,34 +347,41 @@
             </div>
         </div>
     </section>
-    <section class="s6-events">
+    <section id="agenda">
         <div class="container">
             <h2>五大關鍵行動，打造成長團隊</h2>
-            <div>
+            <div class="title">
                 <h2>精彩議程</h2>
                 <h3>Agenda</h3>
             </div>
-            <div class="eventscard">
-                <h3>10:00 - 10:50</h3>
-                <div class="eventscard-content-left">
-                    <h3><span>思維、文化建立</span>
-                        <br>
-                        以人為本的創新敏捷文化
-                    </h3>
-                </div>
-                <div class="eventscard-content-right">
-                    <div class="grid"></div>
-                </div>
-            </div>    
-            <div class="eventscard"></div>    
-            <div class="eventscard"></div>
-            <div class="rest">中午休息</div>
-            <div class="eventscard"></div>    
-            <div class="eventscard"></div>    
-            <div class="eventscard"></div>
-            <div class="rest">中午休息</div>
-            <div class="eventscard"></div>
-            <div class="eventscard"></div>    
+            <div class="wrapper">
+                <div class="eventscard">
+                    <h3 class="eventscard-time">10:00 - 10:50</h3>
+                    <div class="eventscard-content-flex"> 
+                        <div class="eventscard-content-left"> <!--為甚麼不拆成兩個做flex?-->
+                            <h3><span>思維、文化建立</span>
+                                <br>
+                                以人為本的創新敏捷文化
+                            </h3>
+                        </div>
+                        <div class="eventscard-content-right-flex">
+                            <div class="grid"></div>
+                            <div class="space"></div>
+                            <div class="photoframe"><img src="/images/teacher011.jpg" alt=""></div>
+                        </div>
+                    
+                    </div> 
+                </div>   
+                <div class="eventscard"></div>    
+                <div class="eventscard"></div>
+                <div class="rest">中午休息</div>
+                <div class="eventscard"></div>    
+                <div class="eventscard"></div>    
+                <div class="eventscard"></div>
+                <div class="rest">中午休息</div>
+                <div class="eventscard"></div>
+                <div class="eventscard"></div> 
+            </div>   
         </div>
     </section>
 </body>

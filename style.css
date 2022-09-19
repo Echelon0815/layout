@@ -10,7 +10,7 @@ body{
     line-height: 1.5; /*寫在body裡面統一文字格式*/
     font-size: 16px;
     font-style: normal;
-    font-family: 'Noto Sans TC','微軟正黑體', 'Arial Narrow, sans-serif';
+    font-family: 'Noto Sans TC','微軟正黑體', 'Arial Narrow','Oswald', 'sans-serif';
     color:#1E1E1E;
     font-weight: 400;
     text-align: left;
@@ -287,7 +287,7 @@ h1,h2,h3,h4,h5,h6,p {
                     box-shadow: none;
                 }
 
-/*----------agenda----------*/
+/*----------info----------*/
 
 
 /*網頁製作者都有指定好字體和大小，這裡幾乎沒寫東西*/
@@ -361,8 +361,6 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
         flex-wrap:wrap;
         max-width: 90%;
         margin: 0 auto;
-        border:1px solid brown;
-        
     }
 
             #teacher .card-container-flex {
@@ -387,6 +385,7 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
                         }
                             #teacher .teacher-img {
                                 width: 100%;
+                                object-fit: cover; /*預設是fill*/
                             }
                     /*瞎用fit-content給矇中了*/
                     #teacher h4 {
@@ -450,15 +449,146 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
                     }
 
 
+/*----------mbrcounter----------*/
 
-section.s5-mbr-counter
-
-.s5-maincontainer  {
-    width: 100%;
-    display: flex;
-    flex-wrap: row wrap;
+#mbrcounter {
+    background: url(/images/bg-num2.svg)top right;
+    background-size: cover;
 }
-.contentbox {
-    flex:0 0 25%;
-    border:1px solid red;
+    #mbrcounter .container {
+        background-color: transparent;
+        box-sizing: border-box;
+        padding: 0px 20px;
+    }
+        #mbrcounter .title {
+            box-sizing: border-box;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+        #mbrcounter .title h2{
+            color: #fff;
+            font-size:57px;
+            padding-top: 20px;
+        }
+        #mbrcounter .title h3{
+            color: #fff;
+            font-size:29px;
+            padding-top: 5px;
+        }
+
+            #mbrcounter .maincontainer  {
+                width: 100%;
+                display: flex;
+                flex-wrap:wrap;
+            }
+                    #mbrcounter .contentbox {
+                        display: flex;
+                        flex-wrap: wrap;
+                        box-sizing: border-box;
+                        flex:0 0 25%;
+                        justify-content: center;
+                    }
+                        #mbrcounter .numbox {
+                            display:flex;
+                            flex-wrap: nowrap;
+                            justify-content: center;
+                            flex:1 0 100%;
+                            padding-bottom: 10px;
+                            color: #fff;
+                            align-items: baseline; /*讓數字靠在baseline*/
+                            
+                        }
+                                #mbrcounter .numbox h4 {
+                                    font-size: 80px;
+                                    font-weight: 500;
+                                    font-family:'Oswald', 'sans-serif';
+                                }
+                            
+                        #mbrcounter .contentbox h5 {
+                            color: #fff;
+                            font-weight: 400;
+                            text-align: center;
+                            font-size: 1.25rem;
+                            padding: 5px 5px 20px 5px;
+                        }
+
+/*-----------agenda----------*/
+#agenda .container h2 {
+    font-size: 2.8rem;
+    font-style: italic;
+    font-weight: 700;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+#agenda .title h2 {
+    margin-bottom:0;
+}
+#agenda .title h3 {
+    padding: 5px 10px 10px 10px;
+}
+/*----------eventscard----------*/
+#agenda .eventscard {
+    box-sizing: border-box;
+}
+#agenda .eventscard-time {
+    font-family: 'DM Sans',sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    width: 20%;
+    /*作者使用了tranform TranslateY 元位置不騰空，y軸平移*/
+    background-color: #fff;
+    margin-left: 3px;
+    transform: TranslateY(20px);
+    text-align: center;
+}
+
+#agenda .eventscard-content-flex {
+    display: flex;
+    padding:15px 10px 7.5px 10px;
+    width: 100%;
+    border: 1px solid red;
+    box-shadow: -8px 5px 1px #1e1e1e;
+}
+
+#agenda .eventscard-content-left {
+    flex:0 0 50%;
+    box-sizing: border-box;
+    background-color: cyan;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+#agenda .eventscard-content-left span{
+    width:fit-content;
+    background-color: #00ED91;
+    box-sizing: border-box;
+    padding: 1px 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+#agenda .eventscard-content-left h3{
+    font-size: 1.8rem;
+}
+#agenda .eventscard-content-right-flex {
+    display: flex;
+    flex: 0 0 50%;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+}
+#agenda .grid {
+    flex:0 0 66.6%;
+    background-color:pink;
+}
+#agenda .space {
+    flex:0 0 16.7%;
+    background-color:blue;
+}
+#agenda .photoframe {
+    flex:0 0 16.7%;
+    background-color: red;
+}
+#agenda .photoframe img {
+    width: 100%;
+    height: 100%;
 }
