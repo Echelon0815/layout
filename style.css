@@ -45,19 +45,19 @@ h1,h2,h3,h4,h5,h6,p {
 /*可以在繼承欄中，按一個像是電腦晶片的東西，顯示出來*/
 /*從nav來設定顏色影響後裔*/
 /*用id來創造可讀性?*/
-.title>h2 {
+.titlebox>h2 {
     font-size: 3rem;
     font-style: italic;
     font-weight: 700;
     letter-spacing: 1px;
 }
-.title>h3 {
+.titlebox>h3 {
     font-size: 1.5rem;
     font-style: italic;
     margin-top: -10px;
 }
-.title {
-    margin-bottom: 60px;
+.titlebox {
+    margin-bottom: 40px;
 }
 /*----------nav----------*/
 /*應該調整整個section的高*/
@@ -451,16 +451,16 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
         background-color: transparent;
         padding: 0px 20px;
     }
-        #mbrcounter .title {
+        #mbrcounter .titlebox {
             margin-top: 20px;
             margin-bottom: 50px;
         }
-        #mbrcounter .title h2{
+        #mbrcounter .titlebox h2{
             color: #fff;
             font-size:57px;
             padding-top: 20px;
         }
-        #mbrcounter .title h3{
+        #mbrcounter .titlebox h3{
             color: #fff;
             font-size:29px;
             padding-top: 5px;
@@ -506,14 +506,18 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
     margin-bottom: 20px;
     padding: 10px;
 }
-#agenda .title h2 {
+#agenda .titlebox h2 {
     margin-bottom:0;
 }
-#agenda .title h3 {
+#agenda .titlebox h3 {
     padding: 5px 10px 10px 10px;
     margin-top: -20px;
 }
 /*----------eventscard----------*/
+#agenda .eventscard {
+    min-height: 146px;
+}
+
 #agenda .eventscard-time {
     font-family: 'DM Sans',sans-serif;
     font-size: 2rem;
@@ -533,49 +537,139 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
         box-shadow: -8px 5px 1px #1e1e1e;
     }
 
-        #agenda .eventscard-content-left {
-            flex:0 0 50%;
-            background-color: cyan;
-            padding-left: 15px;
-            padding-right: 15px;
+                #agenda .eventscard-content-left {
+                    flex:0 0 50%;
+                    padding-left: 15px;
+                    padding-right: 15px;
 
-        }
-        #agenda .eventscard-content-left span{
-            width:fit-content;
-            background-color: #00ED91;
-            padding: 1px 5px;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        /* #agenda .eventscard-content-left h3{u */
+                }
+                        #agenda .eventscard-content-left span{
+                            width:fit-content;
+                            background-color: #00ED91;
+                            padding: 1px 5px;
+                            font-size: 1.2rem;
+                            font-weight: bold;
+                        }
+                        #agenda .eventscard-content-left h3 {
+                            font-size: 1.6rem;
+                        }
         
-        #agenda .eventscard-content-right-flex {
-            flex: 0 0 50%;  
+                #agenda .eventscard-content-right-flex {
+                    flex: 1 0 50%;  
+                    flex-wrap: nowrap;
+                    flex-direction: row;
+                }
+
+                /*運用grow 把名字拉開*/
+
+                        #agenda .host-title-wrap-flex {
+                            flex:1 0 66.6%;
+                            flex-direction: column;
+                        }
+
+                                #agenda .host-title-container-flex{
+                                    height: 50%;
+                                    padding-top: 15px;
+                                    flex:0 0 50%;
+
+                                }
+                                        #agenda .host-title {
+                                            font-size: 1.4rem;
+                                            margin-bottom: 17px;
+                                        }
+                                        #agenda .host-title-big {
+                                            font-size: 1.3rem;
+                                            margin-bottom: -7px;
+                                        }
+
+                                #agenda .event-hostname-container-flex {
+                                    width: 100%; 
+                                    flex:0 0 50%;
+                                    flex-wrap: nowrap;
+                                }
+
+                                        #agenda .arrow {
+                                            width: 65%;
+                                            
+                                        }
+                                        #agenda .hostname {
+                                            flex: 1 0 auto;
+                                            text-align: center;
+                                            font-size: 1.5rem;
+                                        }
+        
+                #agenda .space {
+                    flex:0 0 1%;
+                }
+                #agenda .photoframe {
+                    flex:0 0 16.7%;
+                }
+                        #agenda .photoframe img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: scale-down;
+                        }
+/*-------------------eventscard完成--------------------*/
+
+
+#agenda .rest {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 50px;
+}
+#agenda #biglesson {
+    font-size: 1.4rem;
+}
+
+
+/*----------join----------*/
+#join .container {
+        margin-top: 0px;
+    }
+    #join .titlebox {
+        font-style: italic;
+        font-size: 3rem;
+        font-weight: 700;
+        position: relative;
+        
+    }
+    /*before使用absolute的時候，依舊被relative的titlebox影響*/
+    #join .titlebox::before {
+        content: "";
+        width: 100px;
+        height: 100px;
+        background-image: url(/images/item_7.svg);
+        background-color: transparent;
+        position: absolute;
+        left: 25%;
+    }
+
+    
+        #join .img-wrapper-flex {
+
             flex-wrap: nowrap;
-            flex-direction: row;
-        }
-        #agenda .event-wrap-flex {
-            flex:0 0 66.6%;
-            background-color:pink;
+            justify-content: space-around;
+            padding:20px 5px 0px 50px;
         }
 
-        #agenda .event-title-flex{
+            #join .s3-big {
+                flex:0 0 25%;
+                max-width: 25%;
+                padding: 0 5px;
+            }
+            #join .s3-big h3 {
+                line-height: 1.5;
+                font-size: 22px;
+                font-weight: bold;
+            }
+            #join .s3-small {
+                flex:0 0 8.333%;
+            }
+            #join .s3-img {
+                width: 50%;
+            }
 
-            align-items: baseline;
-        }
-        #agenda .host-title {
-            font-size: 1.5rem;
-        }
-        #agenda .event-host-flex
-        #agenda .space {
-            flex:0 0 16.7%;
-            background-color:blue;
-        }
-        #agenda .photoframe {
-            flex:0 0 16.7%;
-            background-color: red;
-        }
-        #agenda .photoframe img {
-            width: 50px;
-            height: 50px;
-        }
+            
