@@ -46,7 +46,7 @@ h1,h2,h3,h4,h5,h6,p {
 /*從nav來設定顏色影響後裔*/
 /*用id來創造可讀性?*/
 .titlebox>h2 {
-    font-size: 3rem;
+    font-size: 3.3rem;
     font-style: italic;
     font-weight: 700;
     letter-spacing: 1px;
@@ -58,6 +58,7 @@ h1,h2,h3,h4,h5,h6,p {
 }
 .titlebox {
     margin-bottom: 40px;
+    margin-top: 2   0px;
 }
 /*----------nav----------*/
 /*應該調整整個section的高*/
@@ -145,7 +146,7 @@ h1,h2,h3,h4,h5,h6,p {
 /*甚麼是rem,em→rem依照root element (html)宣告的字形做基準為一倍 ；em依照parents*/
 /*----------mainvision----------*/
 #mainvision {
-    padding-top: 8rem;
+    padding-top: 7rem;
     }
     #mainvision .s1-wrapper {
     padding:50px 55px 10px 55px;
@@ -212,6 +213,7 @@ h1,h2,h3,h4,h5,h6,p {
             }
             #forumtimer p {
                 margin-top: 3px;
+                font-weight: 200;
             }
 
             #forumtimer .counter-left {
@@ -227,7 +229,9 @@ h1,h2,h3,h4,h5,h6,p {
                 }
                 #forumtimer h5 {
                     font-size: 1.5rem;
+                    font-weight: 200;
                 }
+
                     #forumtimer .numbers {
                     max-width: 96.8px;
                     background-color: #004FD8;
@@ -261,7 +265,7 @@ h1,h2,h3,h4,h5,h6,p {
                 background-color: white;
                 border:1px solid #1E1E1E;
                 color:#1E1E1E;
-                box-shadow:-7.5px 7.5px 0px #1e1e1e
+                box-shadow:-7.5px 7.5px 1px #1e1e1e
                 }
                 #forumtimer .s2-btn:hover ,
                 .s2-btn:active {
@@ -313,6 +317,9 @@ h1,h2,h3,h4,h5,h6,p {
                 line-height: 1.5;
                 font-size: 22px;
                 font-weight: bold;
+            }
+            #info .s3-big p {
+                text-align: start;
             }
             #info .s3-small {
                 flex:0 0 8.333%;
@@ -450,6 +457,7 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
     #mbrcounter .container {
         background-color: transparent;
         padding: 0px 20px;
+        
     }
         #mbrcounter .titlebox {
             margin-top: 20px;
@@ -499,8 +507,11 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
                         }
 
 /*-----------agenda----------*/
+#agenda .container {
+    padding-top: 5rem;
+}
 #agenda .container h2 {
-    font-size: 2.8rem;
+    font-size: 3.2rem;
     font-style: italic;
     font-weight: 700;
     margin-bottom: 20px;
@@ -528,6 +539,9 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
     margin-left: 3px;
     transform: TranslateY(20px);
     text-align: center;
+    /*用outline做出不佔空間的邊框*/
+    outline: 2px solid #1E1E1E;
+    outline-offset: -5px;
 }
 
     #agenda .eventscard-content-flex {
@@ -549,9 +563,10 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
                             padding: 1px 5px;
                             font-size: 1.2rem;
                             font-weight: bold;
+                            line-height: 2.2;   /*推擠h3*/
                         }
                         #agenda .eventscard-content-left h3 {
-                            font-size: 1.6rem;
+                            font-size: 1.4rem;
                         }
         
                 #agenda .eventscard-content-right-flex {
@@ -574,7 +589,7 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
 
                                 }
                                         #agenda .host-title {
-                                            font-size: 1.4rem;
+                                            font-size: 1.3rem;
                                             margin-bottom: 17px;
                                         }
                                         #agenda .host-title-big {
@@ -595,7 +610,8 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
                                         #agenda .hostname {
                                             flex: 1 0 auto;
                                             text-align: center;
-                                            font-size: 1.5rem;
+                                            font-size: 1.3rem;
+                                            font-weight: 700;
                                         }
         
                 #agenda .space {
@@ -620,14 +636,12 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
     font-weight: bold;
     margin-top: 50px;
 }
-#agenda #biglesson {
-    font-size: 1.4rem;
-}
 
 
 /*----------join----------*/
 #join .container {
         margin-top: 0px;
+        padding-bottom: 2rem;
     }
     #join .titlebox {
         font-style: italic;
@@ -644,7 +658,8 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
         background-image: url(/images/item_7.svg);
         background-color: transparent;
         position: absolute;
-        left: 25%;
+        left: 15%;
+        top:-8%
     }
 
     
@@ -652,24 +667,143 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
 
             flex-wrap: nowrap;
             justify-content: space-around;
-            padding:20px 5px 0px 50px;
+            padding:30px;
         }
 
             #join .s3-big {
-                flex:0 0 25%;
-                max-width: 25%;
+                flex:1 0 25%;
                 padding: 0 5px;
+
             }
             #join .s3-big h3 {
-                line-height: 1.5;
-                font-size: 22px;
+                text-align: center;
+                font-size: 1.5rem;
                 font-weight: bold;
             }
+            #join .s3-big p {
+                text-align: center;
+                font-size: 1rem;
+
+            }
             #join .s3-small {
-                flex:0 0 8.333%;
+                flex:0 0 4.3%;
             }
             #join .s3-img {
-                width: 50%;
+                display: inline-block;
+                position: relative;
+                left:21%;
+                width: 60%;
             }
+/*-----------address----------*/
+#address .container {
+    background-color: transparent;
+    padding-top: 5rem;
+}
+        #address h5 {
+            font-size: 1.5rem;
+            margin: 3px 0;
+        }
+        #address .bold {
+            font-weight: bold;
+        }
+        #address .date {
+            font-family: 'Oswald';
+            font-weight: bold;
+        }
+        #address .small {
+            font-size: 0.8em;
+        }
+        #address  .ticket-container-flex {
+            margin-top: 15px;
+            justify-content: space-between  ;
+        }
+            #address  .ticket{
+                flex:0 0 22.6%;
+                text-align: center;
+                font-size: 1.2rem;
+                font-weight: bold;
+                padding: 1.3rem 0.5rem;
+                border-radius: 5px;
+                border: 1px solid black;
+                color: #1E1E1E;
+            }
+            #address .t1 {
+                background-color: #004FD8;
+                color: #fff;
+                transition: .6s;
+            }
+            #address .t1:hover {
+                background-color: #fab700;
+                color: #1E1E1E;
+            }
+
+            #address .t2 {
+                background-color: #AADDF7;
+                transition: .6s;
+            }
+            #address .t2:hover {
+                background-color: #fab700;
+                
+            }
+            #address .t3 {
+                background-color: #fff;
+                transition: .6s;
+            }
+            #address .t3:hover {
+                background-color: #fab700;
+            }
+            #address .t4 {
+                background-color: #00ED91;
+                transition: .6s;
+            }
+            #address .t4:hover {
+                background-color: #fab700;
+            }
+                #address a span {
+                    font-size: 2.0rem;
+                    font-weight: bolder;
+                }
+                #address span.asksales {
+                    font-weight: 300;
+                }
+                #address .entity {
+                    font-weight: bold;
+                }
+        #address .magazine-left {
+            flex: 0 0 58%;
+            padding-left: 1rem;
+            padding-top: 1rem;
+        }
+
+        #address .magazine-button {
+            text-align: center;
+            padding-top:2rem;
+        }
+
+        #address .magazine-button a{
+            transition: .5s;
+            font-weight: bold;
+            font-size: 1.3rem;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #1E1E1E;
+            color: #1E1E1E;
+            box-shadow: -7.5px 7.5px 1px #1e1e1e;
+        }
+
+        #address .magazine-button a:hover ,
+        #address .magazine-button a:active {
+            color: #BBFF00;
+            background-color: #1e1e1e;
+            box-shadow: none;
+        }
+            
+        #address .magazine-picture {
+            flex: 0 0 42%;
+            max-width: 42%;
+            
+        }
+
+
 
             
