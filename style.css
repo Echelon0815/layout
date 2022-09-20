@@ -127,13 +127,14 @@ h1,h2,h3,h4,h5,h6,p {
                 margin-left: 15px;
                 margin-right: 20px;
                 font-weight: bold;
-                border: 2px solid white;
-                vertical-align: middle;}
+                border: 0px solid white;
+                vertical-align: middle;
+                transition: .5s;
+                }
                 #nav-link-main:hover,#nav-link-main:active {
-                    transition: .3s;
+
                     color:#fff;
-                    background-color: #004FD8;
-                    border: 2px solid #004FD8;}
+                    background-color: #004FD8;}
             #nav .link-fb-btn{
             flex:0 0 auto;
             padding:0 .5em;
@@ -441,7 +442,7 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
                 }
                     #teacher .card-container-flex:hover .inner-flex {
                         top: 0px;
-                        transition: all .35s ease-out;
+                        transition: all .5s cubic-bezier(.47,.53,.18,.91);
                         visibility: visible;
                         opacity: 1;
 
@@ -724,13 +725,12 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
                 font-weight: bold;
                 padding: 1.3rem 0.5rem;
                 border-radius: 5px;
-                border: 1px solid black;
                 color: #1E1E1E;
             }
             #address .t1 {
                 background-color: #004FD8;
                 color: #fff;
-                transition: .6s;
+                transition: .5s;
             }
             #address .t1:hover {
                 background-color: #fab700;
@@ -739,7 +739,7 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
 
             #address .t2 {
                 background-color: #AADDF7;
-                transition: .6s;
+                transition: .5s;
             }
             #address .t2:hover {
                 background-color: #fab700;
@@ -747,14 +747,14 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
             }
             #address .t3 {
                 background-color: #fff;
-                transition: .6s;
+                transition: .5s;
             }
             #address .t3:hover {
                 background-color: #fab700;
             }
             #address .t4 {
                 background-color: #00ED91;
-                transition: .6s;
+                transition: .5s;
             }
             #address .t4:hover {
                 background-color: #fab700;
@@ -775,34 +775,59 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
             padding-top: 1rem;
         }
 
-        #address .magazine-button {
-            text-align: center;
-            padding-top:2rem;
-        }
+                #address .magazine-button {
+                    text-align: center;
+                    padding-top:2rem;
+                }
 
-        #address .magazine-button a{
-            transition: .5s;
-            font-weight: bold;
-            font-size: 1.3rem;
-            padding: 10px;
-            background-color: white;
-            border: 1px solid #1E1E1E;
-            color: #1E1E1E;
-            box-shadow: -7.5px 7.5px 1px #1e1e1e;
-        }
+                #address .magazine-button a{
+                    transition: .5s;
+                    font-weight: bold;
+                    font-size: 1.3rem;
+                    padding: 10px;
+                    background-color: white;
+                    border: 1px solid #1E1E1E;
+                    color: #1E1E1E;
+                    box-shadow: -7.5px 7.5px 1px #1e1e1e;
+                }
 
-        #address .magazine-button a:hover ,
-        #address .magazine-button a:active {
-            color: #BBFF00;
-            background-color: #1e1e1e;
-            box-shadow: none;
-        }
+                #address .magazine-button a:hover ,
+                #address .magazine-button a:active {
+                    color: #BBFF00;
+                    background-color: #1e1e1e;
+                    box-shadow: none;
+                }
             
         #address .magazine-picture {
             flex: 0 0 42%;
             max-width: 42%;
-            
         }
+        #address .supersale {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            font-weight: bold;
+            background-color: white;
+            border: 1px solid #1E1E1E;
+            color: #1E1E1E;
+            box-shadow: -7px 7px 1px #1e1e1e;
+        }
+            #address .supersale h3 { 
+                font-size: 1.5rem;
+            }
+            #address .supersale h5 { 
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+            }
+            #address .supersale span {
+                background-color: #00ED91;
+                font-style: italic;
+                margin-right: 1rem;
+            }
+
+            #address .supersale p { 
+                font-size: 1rem;
+            }
+
 
 
 
