@@ -922,9 +922,10 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
 }
 #about .speaker-name h6{
     background-color: #fff;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #1E1E1E;
     padding: 10px;
+    margin-top: -12px;
 }
 #about .owl-next {
     background-color: #00ED91;
@@ -939,6 +940,7 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
 }
 /*不會調整箭頭圖案*/
 
+/*----------第三段----------*/
 
 
 

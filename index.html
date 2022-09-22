@@ -682,7 +682,7 @@
                 <h3>Review</h3>
             </div>
             <!--花了兩小時才成功，我很不會找bug-->
-            <div class="owl-carousel owl-theme">
+            <div id="owl-one" class="owl-carousel owl-theme">
                 <div class="item speaker-card">
                     <div class="speaker-img"><img src="/images/s_01.jpg" alt=""></div>
                     <div class="speaker-name">
@@ -788,15 +788,60 @@
                         <h6>《經理人／數位時代》 創新長</h6>
                     </div>
                 </div>
-                
-
-
+            </div>
+        </div>
+        <div class="container extra-section">
+            <div class="titlebox">
+                <h2>活動現場</h2>
+                <h3>Activity</h3>
+            </div>
+            <div id="owl-two" class="owl-carousel owl-theme">
+                <div class="item" style="width:480px;">
+                    <div  style="background-image:url(images/act/a-01.jpg)center center;"></div>
+                </div>
+                <div class="item" style="width:480px;">
+                    <div  style="background-image:url(images/act/a-02.jpg)"></div>
+                </div>
+                <div class="item" style="width:480px;">
+                    <div  style="background-image:url(images/act/a-03.jpg)"></div>
+                </div>
+                <div class="item" style="width:480px;">
+                    <div  style="background-image:url(images/act/a-04.jpg)"></div>
+                </div>
+                <div class="item" style="width:480px;">
+                    <div  style="background-image:url(images/act/a-05.jpg)"></div>
+                </div>
+                <div class="item" style="width:480px;">
+                    <div  style="background-image:url(images/act/a-06.jpg)"></div>
+                </div>
+                <div class="item" style="width:480px;">
+                    <div  style="background-image:url(images/act/a-07.jpg)"></div>
+                </div>
+                <div class="item" style="width:480px;">
+                    <div  style="background-image:url(images/act/a-08.jpg)"></div>
+                </div>
+                <div class="item" style="width:480px;">
+                    <div  style="background-image:url(images/act/a-09.jpg)"></div>
+                </div>
+                <div class="item" style="width:480px;">
+                    <div  style="background-image:url(images/act/a-10.jpg)"></div>
+                </div>
+                <div class="item" style="width:480px;">
+                    <div  style="background-image:url(images/act/a-11.jpg)"></div>
+                </div>
+                <div class="item" style="width:480px;">
+                    <div  style="background-image:url(images/act/a-12.jpg)"></div>
+                </div>
             </div>
         </div>
     </section>
-     <!--看不懂==-->
+    
+    
+    
+    
+    <!--看不懂==-->
     <script>
-        $('.owl-carousel').owlCarousel({
+        $('#owl-one').owlCarousel({
     // navSpeed:2/true, //未知
     autoplay:true,//會自動播放
     autoplayTimeout:3000,//每次執行自動播放需要多少時間，1000是一秒
@@ -809,8 +854,17 @@
     // stagePadding:10, //用來讓stage(照片移動的軸)變寬，可以看到其他的圖，數字越大看越多
     item:3, //這數字不照我想像的運作？
     autoWidth:true, //將item的寬設置給所有item
-
-
+    })
+    $('#owl-two').owlCarousel({
+    autoplay:true,
+    autoplayTimeout:3000,
+    loop:true, 
+    margin:10, 
+    nav:false,
+    dots:false,
+    center:true,
+    mouseDrag:true, 
+    item:3, 
     })
     </script>
 </body>
