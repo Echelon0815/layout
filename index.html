@@ -8,14 +8,16 @@
     <!--載入jQuery含式庫-->
     <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
     <!--使用owl carousel------官方說css要在js之前-->
-    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
-    <link rel="stylesheet" href="owlcarousel/owl.theme.default.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="/OwlCarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/OwlCarousel/dist/assets/owl.theme.default.min.css">
+    <!--先載入jquery，再載入owl.carousel-->
+    <script src="/Jquery_compressed.js"></script>
+    <script src="/OwlCarousel/dist/owl.carousel.min.js"></script>
     <!--載入google字形-->
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
-    <!---->
+    <!--我的css-->
     <link rel="stylesheet" href="cssreset.css">
     <link rel="stylesheet" href="style.css"> <!--相對路徑同資料夾不用dot-->
 </head>
@@ -624,8 +626,8 @@
                     <p>即日起，報名加贈《經理人月刊》２本（《數位轉型五堂課》《活用數據做決策》），數量有限，贈完為止。
                         <br>
                         活動洽詢：(02)8773-9808 分機#355 楊小姐
-                        <a href="">karen.yang@managertoday.com.tw</a>、#326 陳小姐
-                        <a href="">eve.chen@bnext.com.tw</a>
+                        <a class="staff-address" href="">karen.yang@managertoday.com.tw</a>、#326 陳小姐
+                        <a class="staff-address" href="">eve.chen@bnext.com.tw</a>
                         <br>
                         主辦單位保留活動及課程大綱異動之權利，更新資訊以活動網站內容為主。
                         <br>
@@ -650,7 +652,7 @@
         </div>
     </section>
     <section id="about">
-        <div class="container">
+        <div class="container first-half-section">
             <div class="titlebox">
                 <h2>關於未來經理人</h2>
                 <h3>About FUTURE MANAGER</h3>
@@ -667,6 +669,149 @@
                 <h5><span>歷屆回顧</span><a href="">2021</a> | <a href="">2020</a> | <a href="">2019</a> | <a href="">2018</a> | <a href="">2017</a></h5>
             </div>
         </div>
+        <div class="container next-half-section">
+            <div class="titlebox">
+                <h2>品牌合作</h2>
+            </div>
+            <div class="text">
+                <h6>《經理人》年度品牌活動 未來經理人，每年匯聚超過 250 位以上產業領袖與經理人齊聚交流，今年將在 9 月舉行，我們期待帶給大家前瞻的商業思維、最實務的管理心法、實用的應用工具。歡迎一起加入我們，成為未來經理人的品牌合作夥伴。 
+                <br>意者請洽 紀小姐｜<a class="staff-address" href="">anna.chi@bnext.com.tw</a>(02)87739808#351</h6>
+            </div>
+            <div class="titlebox top-margin">
+                <h2 style="color:#fff">精彩回顧</h2>
+                <h3>Review</h3>
+            </div>
+            <!--花了兩小時才成功，我很不會找bug-->
+            <div class="owl-carousel owl-theme">
+                <div class="item speaker-card">
+                    <div class="speaker-img"><img src="/images/s_01.jpg" alt=""></div>
+                    <div class="speaker-name">
+                        <h3>譚宏</h3>
+                        <h6>麥肯錫公司全球董事合夥人</h6>
+                    </div>
+                </div>
+                <div class="item speaker-card">
+                    <div class="speaker-img"><img src="/images/s_02.jpg" alt=""></div>
+                    <div class="speaker-name">
+                        <h3>吳建頤</h3>
+                        <h6>將來銀行NEXT BANK策略長</h6>
+                    </div>
+                </div>
+                <div class="item speaker-card">
+                    <div class="speaker-img"><img src="/images/s_03.jpg" alt=""></div>
+                    <div class="speaker-name">
+                        <h3>曾正忠</h3>
+                        <h6>台大創創中心執行長</h6>
+                    </div>
+                </div>
+                <div class="item speaker-card">
+                    <div class="speaker-img"><img src="/images/s_04.jpg" alt=""></div>
+                    <div class="speaker-name">
+                        <h3>李聖珉</h3>
+                        <h6>前遠傳電信策略副總暨財務長/CTPS Lab創辦人</h6>
+                    </div>
+                </div>
+                <div class="item speaker-card">
+                    <div class="speaker-img"><img src="/images/s_05.jpg" alt=""></div>
+                    <div class="speaker-name">
+                        <h3>陳庭寬</h3>
+                        <h6>FunNow 執行長</h6>
+                    </div>
+                </div>
+                <div class="item speaker-card">
+                    <div class="speaker-img"><img src="/images/s_06.jpg" alt=""></div>
+                    <div class="speaker-name">
+                        <h3>李健輔</h3>
+                        <h6>國泰世華銀行數位銀行部經理</h6>
+                    </div>
+                </div>
+                <div class="item speaker-card">
+                    <div class="speaker-img"><img src="/images/s_07.jpg" alt=""></div>
+                    <div class="speaker-name">
+                        <h3>陳威帆</h3>
+                        <h6>Fourdesire 創辦人兼製作人</h6>
+                    </div>
+                </div>
+                <div class="item speaker-card">
+                    <div class="speaker-img"><img src="/images/s_08.jpg" alt=""></div>
+                    <div class="speaker-name">
+                        <h3>徐瑞廷</h3>
+                        <h6>BCG 董事總經理暨全球合夥人</h6>
+                    </div>
+                </div>
+                <div class="item speaker-card">
+                    <div class="speaker-img"><img src="/images/s_10.jpg" alt=""></div>
+                    <div class="speaker-name">
+                        <h3>林鑫川</h3>
+                        <h6>星展銀行（台灣）總經理</h6>
+                    </div>
+                </div>
+                <div class="item speaker-card">
+                    <div class="speaker-img"><img src="/images/s_11.jpg" alt=""></div>
+                    <div class="speaker-name">
+                        <h3>管其毅</h3>
+                        <h6>Data Science Meetup 台灣資料科學社群創辦人</h6>
+                    </div>
+                </div>
+                <div class="item speaker-card">
+                    <div class="speaker-img"><img src="/images/s_12.jpg" alt=""></div>
+                    <div class="speaker-name">
+                        <h3>林大維</h3>
+                        <h6>91APP 產品發展 聯合處資深副總</h6>
+                    </div>
+                </div>
+                <div class="item speaker-card">
+                    <div class="speaker-img"><img src="/images/s_13.jpg" alt=""></div>
+                    <div class="speaker-name">
+                        <h3>Laura Flores</h3>
+                        <h6>Agoda 資深產品經理</h6>
+                    </div>
+                </div>
+                <div class="item speaker-card">
+                    <div class="speaker-img"><img src="/images/s_14.jpg" alt=""></div>
+                    <div class="speaker-name">
+                        <h3>史孟康</h3>
+                        <h6>DDG 方策 品牌顧問創辦人</h6>
+                    </div>
+                </div>
+                <div class="item speaker-card">
+                    <div class="speaker-img"><img src="/images/s_15.jpg" alt=""></div>
+                    <div class="speaker-name">
+                        <h3>齊立文</h3>
+                        <h6>《經理人》 總編輯</h6>
+                    </div>
+                </div>
+                <div class="item speaker-card">
+                    <div class="speaker-img"><img src="/images/s_16.jpg" alt=""></div>
+                    <div class="speaker-name">
+                        <h3>黃亮崢</h3>
+                        <h6>《經理人／數位時代》 創新長</h6>
+                    </div>
+                </div>
+                
+
+
+            </div>
+        </div>
     </section>
+     <!--看不懂==-->
+    <script>
+        $('.owl-carousel').owlCarousel({
+    // navSpeed:2/true, //未知
+    autoplay:true,//會自動播放
+    autoplayTimeout:3000,//每次執行自動播放需要多少時間，1000是一秒
+    loop:true, //會從頭到尾循環
+    margin:10, //每個item的margin-right，單位是px
+    nav:true, //讓箭頭出現|消失
+    dots:false,//讓點點出現|消失
+    center:true, //讓被操縱的item置中
+    mouseDrag:true, //可以用滑鼠操縱，預設是true
+    // stagePadding:10, //用來讓stage(照片移動的軸)變寬，可以看到其他的圖，數字越大看越多
+    item:3, //這數字不照我想像的運作？
+    autoWidth:true, //將item的寬設置給所有item
+
+
+    })
+    </script>
 </body>
 </html>

@@ -41,6 +41,15 @@ h1,h2,h3,h4,h5,h6,p {
         background-color:white;
         padding: 2rem 2rem 3rem;
     }
+.staff-address {
+    color: #FF7300;
+    transition: .5s;
+}
+.staff-address:hover {
+    color: #0056b3;
+}
+
+
 /*網頁中有很多元件被分類之後重新運用，某些section開頭的就是*/
 /*可以在繼承欄中，按一個像是電腦晶片的東西，顯示出來*/
 /*從nav來設定顏色影響後裔*/
@@ -821,7 +830,7 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
             }
 
             #address .supersale p { 
-                font-size: 1rem;
+                font-size: 1.1rem;
             }
 
 /*----------about-----------*/
@@ -846,15 +855,15 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
     font-weight: bold;
     color: #ffd000;;
 }
-#about h6{
-    font-size: 1.2rem;
+#about .first-half-section h6{
+    font-size: 1.3rem;
     font-weight: bold;
     color: #fff;
 }
 
 /*why flex ?*/
 /*用inline元素沒辦法控制上下margin*/
-#about .row-review h5 span {
+#about .first-half-section .row-review h5 span {
     width: fit-content;
     display: inline-block;
     background-color: rgb(0, 237, 145);
@@ -865,10 +874,70 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
     margin:1rem 2rem 2rem 0rem;
 }
 
-#about .row-review h5 a {
+#about .first-half-section .row-review h5 a {
     color: #fff;
     font-size: 1.2rem;
 }
+
+#about .next-half-section .titlebox h2 {
+    color: #00ED91;
+}
+#about .next-half-section h6 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+#about .next-half-section .top-margin {
+    margin-top: 5rem;
+}
+/*用趴數不行*/
+#about .speaker-card{
+    position: relative;
+    height:390px;
+    border: 2px solid black;
+    width: 300px;
+}
+
+#about .speaker-img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+#about .speaker-name {
+    position: absolute;
+    background-color: #fff;
+    width: 100%;
+    height: 28%;
+    bottom: 0%;
+    border-top: 2px solid black;
+}
+#about .speaker-name h3{
+    background-color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1E1E1E;
+    padding: 3px 5px 3px 10px;
+}
+#about .speaker-name h6{
+    background-color: #fff;
+    font-size: 1.1rem;
+    color: #1E1E1E;
+    padding: 10px;
+}
+#about .owl-next {
+    background-color: #00ED91;
+    width:50px;
+    height: 50px;
+}
+#about .owl-prev {
+    background-color: #00ED91;
+    width:50px;
+    height: 50px;
+
+}
+/*不會調整箭頭圖案*/
 
 
 
