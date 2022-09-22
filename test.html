@@ -6,13 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-    div {
-        border: 2px solid black;
-    }
+        * {
+            box-sizing: content-box;
+        }
+        .box {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            background-color: pink;
+            margin: 5px;
+        }
+
+        .ab {
+            height: 100%;
+            width: 100%;
+            background-color: aqua;
+            opacity: .5;
+
+            position: absolute;
+            
+
+        }
 
         </style>
 </head>
 <body>
-<div><img src="/images/teacher018.jpg" alt=""></div>
+<div class="box">
+    <div class="ab"></div>
+</div>
 </body>
 </html>

@@ -58,7 +58,7 @@ h1,h2,h3,h4,h5,h6,p {
 }
 .titlebox {
     margin-bottom: 40px;
-    margin-top: 2   0px;
+    margin-top: 0px;
 }
 /*----------nav----------*/
 /*應該調整整個section的高*/
@@ -515,14 +515,10 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
     font-size: 3.2rem;
     font-style: italic;
     font-weight: 700;
-    margin-bottom: 20px;
     padding: 10px;
 }
-#agenda .titlebox h2 {
-    margin-bottom:0;
-}
 #agenda .titlebox h3 {
-    padding: 5px 10px 10px 10px;
+    padding: 0 10px;
     margin-top: -20px;
 }
 /*----------eventscard----------*/
@@ -702,7 +698,6 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
 }
         #address h5 {
             font-size: 1.5rem;
-            margin: 3px 0;
         }
         #address .bold {
             font-weight: bold;
@@ -816,6 +811,7 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
             }
             #address .supersale h5 { 
                 font-size: 1.2rem;
+                margin-top: 10px;
                 margin-bottom: 20px;
             }
             #address .supersale span {
@@ -827,6 +823,39 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
             #address .supersale p { 
                 font-size: 1rem;
             }
+
+/*----------about-----------*/
+
+#about  {
+    background-image: url(/images/join.jpg), linear-gradient( 45deg, #090b81c9, #0187a5f3);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#about .container {
+    background-color: transparent;
+}
+
+#about .titlebox {
+    color:#fff
+}
+
+#about h5{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffd000;;
+}
+#about h6{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+/*why flex ?*/
+#about .row-review {
+
+}
 
 
 
