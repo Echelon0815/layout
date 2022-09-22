@@ -853,8 +853,21 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
 }
 
 /*why flex ?*/
-#about .row-review {
+/*用inline元素沒辦法控制上下margin*/
+#about .row-review h5 span {
+    width: fit-content;
+    display: inline-block;
+    background-color: rgb(0, 237, 145);
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #1E1E1E;
+    padding: 3px;
+    margin:1rem 2rem 2rem 0rem;
+}
 
+#about .row-review h5 a {
+    color: #fff;
+    font-size: 1.2rem;
 }
 
 
