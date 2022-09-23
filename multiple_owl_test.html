@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Owl Test</title>
+      <!--使用owl carousel------官方說css要在js之前-->
+      <link rel="stylesheet" href="/OwlCarousel/dist/assets/owl.carousel.min.css">
+      <link rel="stylesheet" href="/OwlCarousel/dist/assets/owl.theme.default.min.css">
+      <!--先載入jquery，再載入owl.carousel-->
+      <script src="/Jquery_compressed.js"></script>
+      <script src="/OwlCarousel/dist/owl.carousel.min.js"></script>
+
+      <style>
+        #owl-two .item {
+            height: 390px;
+            width: 100%;
+            background-image: url(/images/act/a-01.jpg);
+        }
+      </style>
+</head>
+<body>
+    <section class="firstowl">
+        <div id="owl-one" class="owl-carousel owl-theme">
+            <div class="item speaker-card">
+                <div class="speaker-img"><img src="/images/s_01.jpg" alt=""></div>
+                <div class="speaker-name">
+                    <h3>譚宏</h3>
+                    <h6>麥肯錫公司全球董事合夥人</h6>
+                </div>
+            </div>
+            <div class="item speaker-card">
+                <div class="speaker-img"><img src="/images/s_02.jpg" alt=""></div>
+                <div class="speaker-name">
+                    <h3>吳建頤</h3>
+                    <h6>將來銀行NEXT BANK策略長</h6>
+                </div>
+            </div>
+            <div class="item speaker-card">
+                <div class="speaker-img"><img src="/images/s_03.jpg" alt=""></div>
+                <div class="speaker-name">
+                    <h3>曾正忠</h3>
+                    <h6>台大創創中心執行長</h6>
+                </div>
+            </div>
+            <div class="item speaker-card">
+                <div class="speaker-img"><img src="/images/s_04.jpg" alt=""></div>
+                <div class="speaker-name">
+                    <h3>李聖珉</h3>
+                    <h6>前遠傳電信策略副總暨財務長/CTPS Lab創辦人</h6>
+                </div>
+            </div>
+            <div class="item speaker-card">
+                <div class="speaker-img"><img src="/images/s_05.jpg" alt=""></div>
+                <div class="speaker-name">
+                    <h3>陳庭寬</h3>
+                    <h6>FunNow 執行長</h6>
+                </div>
+            </div>
+            <div class="item speaker-card">
+                <div class="speaker-img"><img src="/images/s_06.jpg" alt=""></div>
+                <div class="speaker-name">
+                    <h3>李健輔</h3>
+                    <h6>國泰世華銀行數位銀行部經理</h6>
+                </div>
+            </div>
+            <div class="item speaker-card">
+                <div class="speaker-img"><img src="/images/s_07.jpg" alt=""></div>
+                <div class="speaker-name">
+                    <h3>陳威帆</h3>
+                    <h6>Fourdesire 創辦人兼製作人</h6>
+                </div>
+            </div>
+            <div class="item speaker-card">
+                <div class="speaker-img"><img src="/images/s_08.jpg" alt=""></div>
+                <div class="speaker-name">
+                    <h3>徐瑞廷</h3>
+                    <h6>BCG 董事總經理暨全球合夥人</h6>
+                </div>
+            </div>
+            <div class="item speaker-card">
+                <div class="speaker-img"><img src="/images/s_10.jpg" alt=""></div>
+                <div class="speaker-name">
+                    <h3>林鑫川</h3>
+                    <h6>星展銀行（台灣）總經理</h6>
+                </div>
+            </div>
+            <div class="item speaker-card">
+                <div class="speaker-img"><img src="/images/s_11.jpg" alt=""></div>
+                <div class="speaker-name">
+                    <h3>管其毅</h3>
+                    <h6>Data Science Meetup 台灣資料科學社群創辦人</h6>
+                </div>
+            </div>
+            <div class="item speaker-card">
+                <div class="speaker-img"><img src="/images/s_12.jpg" alt=""></div>
+                <div class="speaker-name">
+                    <h3>林大維</h3>
+                    <h6>91APP 產品發展 聯合處資深副總</h6>
+                </div>
+            </div>
+            <div class="item speaker-card">
+                <div class="speaker-img"><img src="/images/s_13.jpg" alt=""></div>
+                <div class="speaker-name">
+                    <h3>Laura Flores</h3>
+                    <h6>Agoda 資深產品經理</h6>
+                </div>
+            </div>
+            <div class="item speaker-card">
+                <div class="speaker-img"><img src="/images/s_14.jpg" alt=""></div>
+                <div class="speaker-name">
+                    <h3>史孟康</h3>
+                    <h6>DDG 方策 品牌顧問創辦人</h6>
+                </div>
+            </div>
+            <div class="item speaker-card">
+                <div class="speaker-img"><img src="/images/s_15.jpg" alt=""></div>
+                <div class="speaker-name">
+                    <h3>齊立文</h3>
+                    <h6>《經理人》 總編輯</h6>
+                </div>
+            </div>
+            <div class="item speaker-card">
+                <div class="speaker-img"><img src="/images/s_16.jpg" alt=""></div>
+                <div class="speaker-name">
+                    <h3>黃亮崢</h3>
+                    <h6>《經理人／數位時代》 創新長</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="secondowl">
+        <div id="owl-two" class="owl-carousel owl-theme">
+            <!--行內style有作用-->
+            <!--沒有被標上class="item"的div仍占有空間，但卻被設定為hidden-->
+                <div class="item" style="background-image:url(./images/act/a-01.jpg);"></div>
+                <div class="item" style="background-image:url(./images/act/a-02.jpg);"></div>
+                <div class="item" style="background-image:url(./images/act/a-03.jpg);"></div>
+                <div class="item" style="background-image:url(./images/act/a-04.jpg);"></div>
+                <div class="item" style="background-image:url(./images/act/a-05.jpg);"></div>
+                <div class="item" style="background-image:url(./images/act/a-06.jpg);"></div>
+                <div class="item" style="background-image:url(./images/act/a-07.jpg);"></div>
+                <div class="item" style="background-image:url(./images/act/a-08.jpg);"></div>
+                <div class="item" style="background-image:url(./images/act/a-09.jpg);"></div>
+                <div class="item" style="background-image:url(./images/act/a-10.jpg);"></div>
+                <div class="item" style="background-image:url(./images/act/a-11.jpg);"></div>
+                <div class="item" style="background-image:url(./images/act/a-12.jpg);"></div>
+        </div>
+    </section>
+
+
+
+
+
+
+    <script src="two_owls.js"></script>
+</body>
+</html>

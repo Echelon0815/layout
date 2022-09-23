@@ -5,6 +5,10 @@
 * {
     box-sizing: border-box;
 }
+/*讓滾輪可以滑順的動，此屬性可以設在html，但設在body則會失效*/
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     background-image: url(/images/bg-main-ver2.jpg);
@@ -25,7 +29,9 @@ body{
 /*超連接虛擬類別*/
 a, a:focus,a:active,a:visited {
     text-decoration: none;
+    color:inherit;
 }
+/*屬性值flex結尾的都加上display:flex*/
 *[class$="flex"] {
     display: flex;    
 }
@@ -35,7 +41,6 @@ h1,h2,h3,h4,h5,h6,p {
 
 .container {
         max-width: 1280px;
-        border: 2px solid red;
         margin-left: auto;
         margin-right: auto;
         background-color:white;
@@ -51,7 +56,7 @@ h1,h2,h3,h4,h5,h6,p {
 
 
 /*網頁中有很多元件被分類之後重新運用，某些section開頭的就是*/
-/*可以在繼承欄中，按一個像是電腦晶片的東西，顯示出來*/
+/*firefox開發者工具可以在繼承欄中，按一個像是電腦晶片的東西，顯示出來*/
 /*從nav來設定顏色影響後裔*/
 /*用id來創造可讀性?*/
 .titlebox>h2 {
@@ -122,8 +127,9 @@ h1,h2,h3,h4,h5,h6,p {
                 background-color: rgba(0, 0, 0, 0);
                 padding: 8px;
                 text-align: center; /*讓所有連接字置中*/
-                flex:0 0 auto; /*flex-basis auto代表 依照content大小決定寬*/
+                flex:0 0 auto; /*flex-basis auto代表 依照content大小決定寬(如果沒有grow，shrink最小也有content)*/
                 }
+
             #nav .link-main-container{
             flex:0 0 auto;
             margin:10px 0px 10px 12px;
@@ -153,7 +159,7 @@ h1,h2,h3,h4,h5,h6,p {
                 height: 25px;
                 width: 25px;
                 }
-/*甚麼是rem,em→rem依照root element (html)宣告的字形做基準為一倍 ；em依照parents*/
+/*甚麼是rem,em → rem依照root element (html)宣告的字形做基準為一倍 ；em依照parents*/
 /*----------mainvision----------*/
 #mainvision {
     padding-top: 7rem;
@@ -302,12 +308,13 @@ h1,h2,h3,h4,h5,h6,p {
     /*before使用absolute的時候，依舊被relative的titlebox影響*/
     #info .titlebox::before {
         content: "";
-        width: 100px;
-        height: 100px;
+        width: 130px;
+        height: 130px;
         background-image: url(/images/item_7.svg);
         background-color: transparent;
         position: absolute;
         left: 25%;
+        bottom:30% ;
     }
 
     
@@ -354,13 +361,50 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
 #teacher .container {
     background-color: transparent;
 }
+#teacher .container .titlebox  {
+    position: relative;
+}
+#teacher .container .titlebox::after {
+    content: "";
+    width: 150px;
+    height: 150px;
+    background-image: url(/images/item_7.svg);
+    position: absolute;
+    left: 15%;
+    top: -15%;
+}
 
+ /*position:reletive 幫等等:after做基準*/
     #teacher .card-wrapper-flex {
-
+        position: relative;
         flex-wrap:wrap;
         max-width: 87%;
         margin: 0 auto;
     }
+
+    #teacher .card-wrapper-flex::before {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        content:"";
+        background-image: url(/images/item_13.svg);
+        top: 26%;
+        left: -14%;
+        z-index: 5;
+        }
+
+    #teacher .card-wrapper-flex::after {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        content:"";
+        background-image: url(/images/item_16.svg);
+        bottom: -5%;
+        left: -5%;
+        z-index: 5;
+    
+    }
+    
 
             #teacher .card-container-flex {
             flex:0 0 33.33%;
@@ -370,11 +414,9 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
             position: relative;
             border: 2px solid #1E1E1E;
             }
-                /* #teacher .omote {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content:flex-end;
-                } */
+
+
+
                     #teacher .teacher-frame {
                         height: 300px;
                         width: 100%;
@@ -519,17 +561,46 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
 /*-----------agenda----------*/
 #agenda .container {
     padding-top: 5rem;
+    position: relative; 
 }
+
+#agenda .container::before {
+    content: "";
+    background-image: url(/images/item_10.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    top: 4%;
+    right: -7%;
+}
+
+#agenda .container::after {
+    content: "";
+    background-image: url(/images/item_11.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    left: -10%;
+    bottom:-3%;
+}
+
 #agenda .container h2 {
     font-size: 3.2rem;
     font-style: italic;
     font-weight: 700;
     padding: 10px;
 }
+
+/*替pseudo element的 position做準備*/
 #agenda .titlebox h3 {
+
     padding: 0 10px;
     margin-top: -20px;
 }
+
+
 /*----------eventscard----------*/
 #agenda .eventscard {
     min-height: 146px;
@@ -659,13 +730,13 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
     /*before使用absolute的時候，依舊被relative的titlebox影響*/
     #join .titlebox::before {
         content: "";
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         background-image: url(/images/item_7.svg);
         background-color: transparent;
         position: absolute;
         left: 15%;
-        top:-8%
+        bottom: -25%;
     }
 
     
@@ -705,6 +776,21 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
     background-color: transparent;
     padding-top: 5rem;
 }
+
+#address .titlebox {
+    position: relative;
+}
+
+#address .titlebox::after {
+        content: "";
+        width: 150px;
+        height: 150px;
+        background-image: url(/images/item_7.svg);
+        position: absolute;
+        left: 15%;
+        top: -15%;
+}
+
         #address h5 {
             font-size: 1.5rem;
         }
@@ -834,35 +920,48 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
             }
 
 /*----------about-----------*/
-
+/*讓owl不要超出section*/
 #about  {
     background-image: url(/images/join.jpg), linear-gradient( 45deg, #090b81c9, #0187a5f3);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    overflow:hidden;
 }
 
-#about .container {
-    background-color: transparent;
-}
+    #about .container {
+        background-color: transparent;
+    }
 
-#about .titlebox {
-    color:#fff
-}
+        #about .titlebox {
+            color:#fff; 
+            position: relative;
+        }
 
-#about h5{
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ffd000;;
-}
-#about .first-half-section h6{
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #fff;
-}
+        #about .first-half-section .titlebox::after {
+            content: "";
+            width: 150px;
+            height: 150px;
+            background-image: url(/images/item_8.svg);
+            position: absolute;
+            left: 25%;
+            top: -15%;
+            }
+
+            #about h5{
+                font-size: 1.5rem;
+                font-weight: bold;
+                color: #ffd000;;
+            }
+            #about .first-half-section h6{
+                font-size: 1.3rem;
+                font-weight: bold;
+                color: #fff;
+            }
 
 /*why flex ?*/
 /*用inline元素沒辦法控制上下margin*/
+
 #about .first-half-section .row-review h5 span {
     width: fit-content;
     display: inline-block;
@@ -880,8 +979,20 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
 }
 
 #about .next-half-section .titlebox h2 {
+    position: relative;
     color: #00ED91;
 }
+
+#about .next-half-section .titlebox h2::after{
+    content: "";
+    width: 150px;
+    height: 150px;
+    background-image: url(/images/item_9.svg);
+    position: absolute;
+    left: 15%;
+    top: -15%;
+    }
+
 #about .next-half-section h6 {
     font-size: 1.3rem;
     font-weight: bold;
@@ -889,8 +1000,20 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
 }
 
 #about .next-half-section .top-margin {
+    position: relative;
     margin-top: 5rem;
 }
+
+#about .next-half-section .top-margin h2::after {
+content: "";
+width: 150px;
+height: 150px;
+background-image: url(/images/item_8.svg);
+position: absolute;
+left: 15%;
+top: -15%;
+}
+
 /*用趴數不行*/
 #about .speaker-card{
     position: relative;
@@ -899,34 +1022,34 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
     width: 300px;
 }
 
-#about .speaker-img {
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-}
+    #about .speaker-img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
 
-#about .speaker-name {
-    position: absolute;
-    background-color: #fff;
-    width: 100%;
-    height: 28%;
-    bottom: 0%;
-    border-top: 2px solid black;
-}
-#about .speaker-name h3{
-    background-color: #fff;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #1E1E1E;
-    padding: 3px 5px 3px 10px;
-}
-#about .speaker-name h6{
-    background-color: #fff;
-    font-size: 1.2rem;
-    color: #1E1E1E;
-    padding: 10px;
-    margin-top: -12px;
-}
+    #about .speaker-name {
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+        height: 28%;
+        bottom: 0%;
+        border-top: 2px solid black;
+    }
+        #about .speaker-name h3{
+            background-color: #fff;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1E1E1E;
+            padding: 3px 5px 3px 10px;
+        }
+        #about .speaker-name h6{
+            background-color: #fff;
+            font-size: 1.2rem;
+            color: #1E1E1E;
+            padding: 10px;
+            margin-top: -12px;
+        }
 #about .owl-next {
     background-color: #00ED91;
     width:50px;
@@ -936,12 +1059,135 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
     background-color: #00ED91;
     width:50px;
     height: 50px;
-
 }
+
+
 /*不會調整箭頭圖案*/
 
 /*----------第三段----------*/
 
 
+#about .extra-section h3,
+#about .extra-section h2 {
+    color:#00ED91;
+    position: relative;
+}
 
-            
+#about .extra-section h2::after {
+    content: "";
+    width: 150px;
+    height: 150px;
+    background-image: url(/images/item_9.svg);
+    position: absolute;
+    left: 15%;
+    top: -15%;
+}
+
+
+/*超出舞台外的圖片也顯示*/
+#about #owl-two.owl-carousel .owl-stage-outer { 
+        position: relative;
+        overflow:visible;
+}
+#about #owl-two.owl-carousel .owl-item img {
+    height: 100%;
+}
+
+#about #advertisement a {
+    display: block;
+    width: 100%;
+    padding: 30px;
+}
+
+#about #advertisement img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*-----------Q&A----------*/
+#qna {
+    background-color: #E2E2E2;
+}
+#qna .container {
+    background-color: inherit;
+}
+
+#qna h3 {
+    font-weight: 500;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+#qna p {
+
+    font-weight: 400;
+    font-size: 1.0rem;
+    margin-bottom: 30px;
+}
+/*----------cooperation----------*/
+#cooperation {
+    background-color: #656565;
+}
+#cooperation .container {
+    background-color: inherit;
+}
+#cooperation h6 {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+#cooperation a,#cooperation img {
+    vertical-align: middle;
+    max-width: 120px;
+    max-height: 32px;
+}
+
+#cooperation a {
+    margin:0 10px 0 10px;
+}
+
+#cooperation .big {
+    max-width: 225px;
+}
+/*----------footer----------*/
+#footer {
+    background-color: #1E1E1E;
+    color: #fff;    
+}
+#footer .container {
+    background-color:inherit;
+}
+
+#footer ul {
+    text-decoration: none;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+#footer li {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#footer h6 {
+    font-size: 0.7rem;
+    text-align: center;
+}
+/*top-button*/
+#top-button {
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+    margin: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #1e1e1e;
+    z-index: 3;
+
+}
+#top-button a {
+    position: absolute;
+    top: 13px;
+    left: 17px;
+    color: #fff;
+    }
+
