@@ -11,7 +11,7 @@ html{
 }
 
 body{
-    background-image: url(/images/bg-main-ver2.jpg);
+    background-image: url(./images/bg-main-ver2.jpg);
     background-attachment: fixed; /*背景不會隨拖拉變化*/
     background-color: rgb(187, 255, 0);
     background-size:cover; /*在不改變比例的狀況下填滿視窗*/
@@ -310,7 +310,7 @@ h1,h2,h3,h4,h5,h6,p {
         content: "";
         width: 130px;
         height: 130px;
-        background-image: url(/images/item_7.svg);
+        background-image: url(./images/item_7.svg);
         background-color: transparent;
         position: absolute;
         left: 25%;
@@ -368,7 +368,7 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
     content: "";
     width: 150px;
     height: 150px;
-    background-image: url(/images/item_7.svg);
+    background-image: url(./images/item_7.svg);
     position: absolute;
     left: 15%;
     top: -15%;
@@ -387,7 +387,7 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
         width: 200px;
         height: 200px;
         content:"";
-        background-image: url(/images/item_13.svg);
+        background-image: url(./images/item_13.svg);
         top: 26%;
         left: -14%;
         z-index: 5;
@@ -398,7 +398,7 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
         width: 150px;
         height: 150px;
         content:"";
-        background-image: url(/images/item_16.svg);
+        background-image: url(./images/item_16.svg);
         bottom: -5%;
         left: -5%;
         z-index: 5;
@@ -503,7 +503,7 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
 /*----------mbrcounter----------*/
 
 #mbrcounter {
-    background: url(/images/bg-num2.svg)top right;
+    background: url(./images/bg-num2.svg)top right;
     background-size: cover;
 }
     #mbrcounter .container {
@@ -566,7 +566,7 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
 
 #agenda .container::before {
     content: "";
-    background-image: url(/images/item_10.svg);
+    background-image: url(./images/item_10.svg);
     background-repeat: no-repeat;
     position: absolute;
     width: 250px;
@@ -577,7 +577,7 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
 
 #agenda .container::after {
     content: "";
-    background-image: url(/images/item_11.svg);
+    background-image: url(./images/item_11.svg);
     background-repeat: no-repeat;
     position: absolute;
     width: 220px;
@@ -732,7 +732,7 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
         content: "";
         width: 150px;
         height: 150px;
-        background-image: url(/images/item_7.svg);
+        background-image: url(./images/item_7.svg);
         background-color: transparent;
         position: absolute;
         left: 15%;
@@ -785,7 +785,7 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
         content: "";
         width: 150px;
         height: 150px;
-        background-image: url(/images/item_7.svg);
+        background-image: url(./images/item_7.svg);
         position: absolute;
         left: 15%;
         top: -15%;
@@ -922,7 +922,7 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
 /*----------about-----------*/
 /*讓owl不要超出section*/
 #about  {
-    background-image: url(/images/join.jpg), linear-gradient( 45deg, #090b81c9, #0187a5f3);
+    background-image: url(./images/join.jpg), linear-gradient( 45deg, #090b81c9, #0187a5f3);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -942,7 +942,7 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
             content: "";
             width: 150px;
             height: 150px;
-            background-image: url(/images/item_8.svg);
+            background-image: url(./images/item_8.svg);
             position: absolute;
             left: 25%;
             top: -15%;
@@ -987,7 +987,7 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
     content: "";
     width: 150px;
     height: 150px;
-    background-image: url(/images/item_9.svg);
+    background-image: url(./images/item_9.svg);
     position: absolute;
     left: 15%;
     top: -15%;
@@ -1008,7 +1008,7 @@ rotate(0.5turn)轉半圈，可以同時使用多個*/
 content: "";
 width: 150px;
 height: 150px;
-background-image: url(/images/item_8.svg);
+background-image: url(./images/item_8.svg);
 position: absolute;
 left: 15%;
 top: -15%;
@@ -1020,7 +1020,7 @@ top: -15%;
     height:390px;
     border: 2px solid black;
     width: 300px;
-}
+}rl(./
 
     #about .speaker-img {
         width: 100%;
@@ -1077,7 +1077,7 @@ top: -15%;
     content: "";
     width: 150px;
     height: 150px;
-    background-image: url(/images/item_9.svg);
+    background-image: url(./images/item_9.svg);
     position: absolute;
     left: 15%;
     top: -15%;
